@@ -1,5 +1,5 @@
 <div align="center">
-Mango With Noctalia Set Up For EndeavourOS.
+Mango With Noctalia Shell and It's Greeter For EndeavourOS.
 </div>
 
 > [!IMPORTANT]
@@ -24,14 +24,22 @@ curl -fsSL https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/man
 
 _____________________________________________________________________________________________________________________
 
-## Step 2: Setup VM Host Tools (OPTIONAL)
+## Step 2: Install Noctalia Greeter From The AUR:
+
+```shell
+yay -S noctalia-greeter
+```
+
+_____________________________________________________________________________________________________________________
+
+## Step 3: Setup VM Host Tools (OPTIONAL)
 
 ```shell
 curl -fsSL https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/Optional-VM | sh
 ```
 _____________________________________________________________________________________________________________________
 
-## Step 3: Setup Secondary Drive:
+## Step 4: Setup Secondary Drive:
 
 ```shell
 sudo mkdir /mnt/games
