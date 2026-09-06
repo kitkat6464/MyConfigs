@@ -146,7 +146,6 @@ echo "Install Gnome Apps"
 echo
 
 PKGS=(
-	'vlc'
 	'loupe'
 	'papers'
 	'nautilus'
@@ -168,6 +167,7 @@ echo "Install Extra Apps"
 echo
 
 PKGS=(
+	'vlc'
 	'kitty'
 	'bazaar'
 	'fastfetch'
