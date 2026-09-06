@@ -230,9 +230,11 @@ echo "Set Default Configs"
 echo
 
 mkdir -p ~/.config/mango
+mkdir -p ~/.config/scopebuddy
 mkdir -p ~/.config/xdg-desktop-portal
 curl -Lo $HOME/.config/mimeapps.list https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/.config/mimeapps.list
 curl -Lo $HOME/.config/mango/config.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/.config/mango/config.conf
+curl -Lo $HOME/.config/scopebuddy/scb.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/.config/scopebuddy/scb.conf
 curl -Lo $HOME/.config/xdg-desktop-portal/mango-portals.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/.config/xdg-desktop-portal/mango-portals.conf
 
 echo
