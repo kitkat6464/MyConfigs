@@ -149,7 +149,6 @@ PKGS=(
 	'loupe'
 	'papers'
 	'nautilus'
-	'gnome-calendar'
 	'gnome-text-editor'
 )
 
