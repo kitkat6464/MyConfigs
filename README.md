@@ -12,7 +12,7 @@ ________________________________________________________________________________
 > [!IMPORTANT]
 > For Security Reasons, WE WILL NOT AUTOMATE AUR PACKAGE INSTALLS IN THE AUTOMATED SETUP. THEY MUST BE INSTALLED MANUALLY.
 
-- Noctalia MangoWM:
+- MangoWM:
 ```shell
 yay -S mangowm
 ```
