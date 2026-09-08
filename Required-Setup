@@ -148,6 +148,8 @@ echo
 PKGS=(
 	'loupe'
 	'papers'
+	'showtime'
+	'decibels'
 	'nautilus'
 	'gnome-text-editor'
 )
@@ -166,11 +168,9 @@ echo "Install Extra Apps"
 echo
 
 PKGS=(
-	'vlc'
 	'kitty'
 	'bazaar'
 	'fastfetch'
-	'vlc-plugins-all'
 )
 
 for PKG in "${PKGS[@]}"; do
