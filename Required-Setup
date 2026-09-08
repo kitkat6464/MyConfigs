@@ -51,6 +51,31 @@ echo
 #---------------------------------------------------#
 
 echo
+echo "Configure Noctalia Greeter"
+echo
+
+sudo mkdir -p /etc/greetd
+sudo chown -R greeter:greeter /etc/greetd/
+sudo usermod -aG video,render greeter
+sudo cp -a /etc/greetd/config.toml /etc/greetd/config.toml.bak
+sudo wget -O /etc/greetd/config.toml https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/greetd/config.toml
+sudo chmod 644 /etc/greetd/config.toml
+
+echo
+echo "Done!"
+echo
+
+echo
+echo "Enable Greetd"
+echo
+
+sudo systemctl enable greetd
+
+echo
+echo "Done!"
+echo
+
+echo
 echo "Install Mango Dependacies"
 echo
 
@@ -103,31 +128,6 @@ for PKG in "${PKGS[@]}"; do
 	echo "INSTALLING: ${PKG}"
 	sudo pacman -S "$PKG" --noconfirm
 done
-
-echo
-echo "Done!"
-echo
-
-echo
-echo "Configure Noctalia Greeter"
-echo
-
-sudo mkdir -p /etc/greetd
-sudo chown -R greeter:greeter /etc/greetd/
-sudo usermod -aG video,render greeter
-sudo cp -a /etc/greetd/config.toml /etc/greetd/config.toml.bak
-sudo wget -O /etc/greetd/config.toml https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/greetd/config.toml
-sudo chmod 644 /etc/greetd/config.toml
-
-echo
-echo "Done!"
-echo
-
-echo
-echo "Enable Greetd"
-echo
-
-sudo systemctl enable greetd
 
 echo
 echo "Done!"

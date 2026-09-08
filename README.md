@@ -1,22 +1,30 @@
 <div align="center">
-Mango With Noctalia Shell and It's Greeter For EndeavourOS.
+MangoWM With Noctalia Shell and It's Greeter For EndeavourOS.
 </div>
 
 > [!IMPORTANT]
 > READ INSTALLER FILE TO SEE WHAT GETS INSTALLED. Fork This Repo and Remove Stuff You Don't Need Or If You Want To Add Something.
 
-
 _____________________________________________________________________________________________________________________
 
-## Step 0: Install Mango From The AUR (Run This If You Installed With No Desktop)
+## Step 0: Install MangoWM and Noctalia Greeter From The AUR (Run This If You Installed With No Desktop)
 
+> [!IMPORTANT]
+> For Security Reasons, WE WILL NOT AUTOMATE AUR PACKAGE INSTALLS IN THE AUTOMATED SETUP. THEY MUST BE INSTALLED MANUALLY.
+
+- Noctalia MangoWM:
 ```shell
 yay -S mangowm
 ```
 
+- Noctalia Greeter:
+```shell
+yay -S noctalia-greeter
+```
+
 _____________________________________________________________________________________________________________________
 
-## Step 1: Install Noctalia Along With Useful Apps:
+## Step 1: Install Noctalia Shell Along With Useful Apps:
 
 ```shell
 curl -fsSL https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/Required-Setup | sh
@@ -24,22 +32,14 @@ curl -fsSL https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/man
 
 _____________________________________________________________________________________________________________________
 
-## Step 2: Install Noctalia Greeter From The AUR:
-
-```shell
-yay -S noctalia-greeter
-```
-
-_____________________________________________________________________________________________________________________
-
-## Step 3: Setup VM Host Tools (OPTIONAL)
+## Step 2: Setup VM Host Tools (OPTIONAL)
 
 ```shell
 curl -fsSL https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/Optional-VM | sh
 ```
 _____________________________________________________________________________________________________________________
 
-## Step 4: Setup Secondary Drive:
+## Step 3: Setup Secondary Drive:
 
 ```shell
 sudo mkdir /mnt/games
