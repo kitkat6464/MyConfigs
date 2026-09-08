@@ -46,6 +46,24 @@ echo
 echo "Done!"
 echo
 
+echo
+echo "Install LTS Linux Kernel"
+echo
+
+PKGS=(
+	'linux-lts'
+	'linux-lts-headers'
+)
+
+for PKG in "${PKGS[@]}"; do
+	echo "INSTALLING: ${PKG}"
+	sudo pacman -S "$PKG" --noconfirm
+done
+
+echo
+echo "Done!"
+echo
+
 #---------------------------------------------------#
 # Section 1 - Login Manager and Tiling Manger Setup #
 #---------------------------------------------------#
