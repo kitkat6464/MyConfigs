@@ -178,6 +178,7 @@ echo "Installing Additional Apps"
 echo
 
 PKGS=(
+	'cava'
 	'kitty'
 	'bazaar'
 )
