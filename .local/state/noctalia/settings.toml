@@ -197,7 +197,7 @@ enabled = true
 icon_size = 44
 launcher_position = "start"
 pinned = [
-    "org.kde.dolphin",
+    "nautilus",
     "firefox",
     "kitty",
     "com.spotify.Client",
