@@ -1,5 +1,5 @@
 <div align="center">
-MangoWM With Noctalia Shell and Noctalia Greeter For CachyOS. Custom Setup.
+MangoWM With Noctalia Shell and Noctalia Greeter For EndeavourOS.
 </div>
 
 > [!IMPORTANT]
@@ -7,7 +7,23 @@ MangoWM With Noctalia Shell and Noctalia Greeter For CachyOS. Custom Setup.
 
 _____________________________________________________________________________________________________________________
 
-## Step 1: Install MangoWM, Noctalia Shell and Noctalia Greeter Along With Useful Apps:
+## Step 1: Install MangoWM and Noctalia Greeter From The AUR (Run This If You Installed With No Desktop)
+
+> [!IMPORTANT]
+> For Security Reasons, WE WILL NOT AUTOMATE AUR PACKAGE INSTALLS IN THE AUTOMATED SETUP. THEY MUST BE INSTALLED MANUALLY.
+
+- MangoWM:
+```shell
+yay -S mangowm
+```
+
+- Noctalia Greeter:
+```shell
+yay -S noctalia-greeter
+```
+_____________________________________________________________________________________________________________________
+
+## Step 2: Install Noctalia Shell Along With Some Useful Apps:
 
 ```shell
 curl -fsSL https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/Required-Setup | sh
@@ -15,7 +31,7 @@ curl -fsSL https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/man
 
 _____________________________________________________________________________________________________________________
 
-## Step 2: Setup Secondary Drive:
+## Step 3: Setup Secondary Drive:
 
 ```shell
 sudo mkdir /mnt/games

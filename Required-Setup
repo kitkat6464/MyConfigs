@@ -11,7 +11,8 @@
 # Section 3 - Noctalia Shell Setup                  #
 # Section 4 - Core Apps Setup                       #
 # Section 5 - Custom Config Setup                   #
-# Section 6 - Post Flight                           #
+# Section 6 - System Optimsations                   #
+# Section 7 - Post Flight                           #
 #---------------------------------------------------#
 
 #---------------------------------------------------#
@@ -29,6 +30,16 @@ echo "Done!"
 echo
 
 echo
+echo "Refreshing AUR"
+echo
+
+yay -Syu
+
+echo
+echo "Done!"
+echo
+
+echo
 echo "Enabling Graphical Target"
 echo
 
@@ -38,19 +49,27 @@ echo
 echo "Done!"
 echo
 
-#---------------------------------------------------#
-# Section 1 - Noctalia Greeter Setup                #
-#---------------------------------------------------#
-
 echo
-echo "Installing Noctalia Greeter"
+echo "Installing LTS Linux Kernel"
 echo
 
-sudo pacman -S noctalia-greeter --noconfirm
+PKGS=(
+	'linux-lts'
+	'linux-lts-headers'
+)
+
+for PKG in "${PKGS[@]}"; do
+	echo "INSTALLING: ${PKG}"
+	sudo pacman -S "$PKG" --noconfirm
+done
 
 echo
 echo "Done!"
 echo
+
+#---------------------------------------------------#
+# Section 1 - Noctalia Greeter Setup                #
+#---------------------------------------------------#
 
 echo
 echo "Configuring Noctalia Greeter"
@@ -82,11 +101,10 @@ echo
 #---------------------------------------------------#
 
 echo
-echo "Installing Mango and Dependencies"
+echo "Installing Mango Dependencies"
 echo
 
 PKGS=(
-	'mangowm'
 	'wlr-randr'
 	'gnome-keyring'
 	'xdg-desktop-portal-gtk'
@@ -107,7 +125,7 @@ echo
 #---------------------------------------------------#
 
 echo
-echo "Installing Noctalia and Dependencies"
+echo "Installing Noctalia Shell and Dependencies"
 echo
 
 PKGS=(
@@ -174,13 +192,29 @@ echo "Done!"
 echo
 
 echo
+echo "Installing Gnome Circle Apps"
+echo
+
+PKGS=(
+	'bazaar'
+)
+
+for PKG in "${PKGS[@]}"; do
+	echo "INSTALLING: ${PKG}"
+	sudo pacman -S "$PKG" --noconfirm
+done
+
+echo
+echo "Done!"
+echo
+
+echo
 echo "Installing Additional Apps"
 echo
 
 PKGS=(
-	'cava'
 	'kitty'
-	'bazaar'
+	'fastfetch'
 )
 
 for PKG in "${PKGS[@]}"; do
@@ -197,26 +231,17 @@ echo "Installing Gaming Packages"
 echo
 
 PKGS=(
-	'cachyos-gaming-meta'
-	'cachyos-gaming-applications'
+	'steam'
+	'mangohud'
+	'gamescope'
+	'umu-launcher'
+	'lib32-mangohud'
 )
 
 for PKG in "${PKGS[@]}"; do
 	echo "INSTALLING: ${PKG}"
 	sudo pacman -S "$PKG" --noconfirm
 done
-
-echo
-echo "Done!"
-echo
-
-echo
-echo "Installing ScopeBuddy"
-echo
-
-sudo wget -O /usr/local/bin/scopebuddy https://raw.githubusercontent.com/OpenGamingCollective/ScopeBuddy/refs/tags/1.5.0/bin/scopebuddy
-sudo chmod +x /usr/local/bin/scopebuddy
-sudo ln -s scopebuddy /usr/local/bin/scb
 
 echo
 echo "Done!"
@@ -247,8 +272,71 @@ echo
 echo "Done!"
 echo
 
+echo
+echo "Installing ScopeBuddy"
+echo
+
+sudo wget -O /usr/local/bin/scopebuddy https://raw.githubusercontent.com/OpenGamingCollective/ScopeBuddy/refs/tags/1.5.0/bin/scopebuddy
+sudo chmod +x /usr/local/bin/scopebuddy
+sudo ln -s scopebuddy /usr/local/bin/scb
+
+echo
+echo "Done!"
+echo
+
 #---------------------------------------------------#
-# Section 6 - Post Flight                           #
+# Section 6 - System Optimsations                   #
+#---------------------------------------------------#
+
+echo
+echo "Installing Optimsation Tools"
+echo
+
+PKGS=(
+	'scx-tools'
+	'scx-scheds'
+	'zram-generator'
+)
+
+for PKG in "${PKGS[@]}"; do
+	echo "INSTALLING: ${PKG}"
+	sudo pacman -S "$PKG" --noconfirm
+done
+
+echo
+echo "Done!"
+echo
+
+echo
+echo "Configuring Optimsation Configs"
+echo
+
+sudo mkdir /etc/systemd/system.conf.d
+sudo mkdir /etc/systemd/user.conf.d
+sudo wget -O /etc/sysctl.d/70-aleph-settings.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/sysctl.d/70-aleph-settings.conf
+sudo wget -O /etc/sysctl.d/99-splitlock.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/sysctl.d/99-splitlock.conf
+sudo wget -O /etc/systemd/zram-generator.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/systemd/zram-generator.conf
+sudo wget -O /etc/udev/rules.d/30-zram.rules https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/rules.d/30-zram.rules
+sudo wget -O /etc/scx_loader.toml https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/scx_loader/scx_loader.toml
+sudo wget -O /etc/security/limits.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/security/limits.conf
+sudo wget -O /etc/systemd/system.conf.d/10-limits.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/systemd/system/10-limits.conf
+sudo wget -O /etc/systemd/user.conf.d/10-limits.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/systemd/user/10-limits.conf
+sudo wget -O /etc/systemd/system.conf.d/00-timeout.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/systemd/00-timeout.conf
+sudo wget -O /etc/systemd/user.conf.d/00-timeout.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/systemd/00-timeout.conf
+sudo wget -O /usr/lib/modules-load.d/ntsync.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/modules-load.d/ntsync.conf
+sudo wget -O /usr/lib/udev/rules.d/99-ntsync.rules https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/rules.d/99-ntsync.rules
+sudo sysctl --system
+sudo systemctl daemon-reload
+sudo systemctl start /dev/zram0
+sudo systemctl enable --now scx_loader.service
+sudo systemctl restart scx_loader.service
+
+echo
+echo "Done!"
+echo
+
+#---------------------------------------------------#
+# Section 7 - Post Flight                           #
 #---------------------------------------------------#
 
 echo
@@ -256,6 +344,16 @@ echo "Refreshing Repos Again"
 echo
 
 sudo pacman -Syu --noconfirm
+
+echo
+echo "Done!"
+echo
+
+echo
+echo "Refresh AUR Again"
+echo
+
+yay -Syu
 
 echo
 echo "Done!"
