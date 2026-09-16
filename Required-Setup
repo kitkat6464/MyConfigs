@@ -193,6 +193,24 @@ echo "Done!"
 echo
 
 echo
+echo "Installing Gaming Packages"
+echo
+
+PKGS=(
+	'cachyos-gaming-meta'
+	'cachyos-gaming-applications'
+)
+
+for PKG in "${PKGS[@]}"; do
+	echo "INSTALLING: ${PKG}"
+	sudo pacman -S "$PKG" --noconfirm
+done
+
+echo
+echo "Done!"
+echo
+
+echo
 echo "Installing ScopeBuddy"
 echo
 
