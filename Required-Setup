@@ -60,7 +60,7 @@ PKGS=(
 
 for PKG in "${PKGS[@]}"; do
 	echo "INSTALLING: ${PKG}"
-	sudo pacman -S "$PKG" --noconfirm
+	sudo pacman -S "$PKG" --noconfirm --needed
 done
 
 echo
@@ -113,7 +113,7 @@ PKGS=(
 
 for PKG in "${PKGS[@]}"; do
 	echo "INSTALLING: ${PKG}"
-	sudo pacman -S "$PKG" --noconfirm
+	sudo pacman -S "$PKG" --noconfirm --needed
 done
 
 echo
@@ -136,7 +136,7 @@ PKGS=(
 
 for PKG in "${PKGS[@]}"; do
 	echo "INSTALLING: ${PKG}"
-	sudo pacman -S "$PKG" --noconfirm
+	sudo pacman -S "$PKG" --noconfirm --needed
 done
 
 echo
@@ -155,7 +155,7 @@ PKGS=(
 
 for PKG in "${PKGS[@]}"; do
 	echo "INSTALLING: ${PKG}"
-	sudo pacman -S "$PKG" --noconfirm
+	sudo pacman -S "$PKG" --noconfirm --needed
 done
 
 echo
@@ -184,7 +184,7 @@ PKGS=(
 
 for PKG in "${PKGS[@]}"; do
 	echo "INSTALLING: ${PKG}"
-	sudo pacman -S "$PKG" --noconfirm
+	sudo pacman -S "$PKG" --noconfirm --needed
 done
 
 echo
@@ -201,7 +201,7 @@ PKGS=(
 
 for PKG in "${PKGS[@]}"; do
 	echo "INSTALLING: ${PKG}"
-	sudo pacman -S "$PKG" --noconfirm
+	sudo pacman -S "$PKG" --noconfirm --needed
 done
 
 echo
@@ -219,7 +219,7 @@ PKGS=(
 
 for PKG in "${PKGS[@]}"; do
 	echo "INSTALLING: ${PKG}"
-	sudo pacman -S "$PKG" --noconfirm
+	sudo pacman -S "$PKG" --noconfirm --needed
 done
 
 echo
@@ -240,7 +240,7 @@ PKGS=(
 
 for PKG in "${PKGS[@]}"; do
 	echo "INSTALLING: ${PKG}"
-	sudo pacman -S "$PKG" --noconfirm
+	sudo pacman -S "$PKG" --noconfirm --needed
 done
 
 echo
@@ -300,7 +300,7 @@ PKGS=(
 
 for PKG in "${PKGS[@]}"; do
 	echo "INSTALLING: ${PKG}"
-	sudo pacman -S "$PKG" --noconfirm
+	sudo pacman -S "$PKG" --noconfirm --needed
 done
 
 echo
