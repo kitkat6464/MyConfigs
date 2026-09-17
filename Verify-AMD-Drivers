@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+
+#---------------------------------------------------#
+# Start - Catrina's Post Setup - Verify AMD Drivers #
+#---------------------------------------------------#
+
+#---------------------------------------------------#
+# Section 0 - Verify AMD Drivers                    #
+#---------------------------------------------------#
+
+echo
+echo "Refreshing Repos"
+echo
+
+sudo pacman -Syu --noconfirm
+
+echo
+echo "Done!"
+echo
+
+echo
+echo "Installing Missing AMD Drivers"
+echo
+
+PKGS=(
+	'mesa'
+	'vulkan-radeon'
+	'lib32-mesa'
+	'lib32-vulkan-radeon'
+	'gst-plugin-va'
+)
+
+for PKG in "${PKGS[@]}"; do
+	echo "INSTALLING: ${PKG}"
+	sudo pacman -S "$PKG" --noconfirm --needed
+done
+
+echo
+echo "Done!"
+echo
+
+echo
+echo "Refreshing Repos Again"
+echo
+
+sudo pacman -Syu --noconfirm
+
+echo
+echo "Done!"
+echo
+
+#---------------------------------------------------#
+# End - Catrina's Post Setup - Verify AMD Drivers   #
+#---------------------------------------------------#
