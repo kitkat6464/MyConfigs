@@ -197,7 +197,7 @@ enabled = true
 icon_size = 44
 launcher_position = "start"
 pinned = [
-    "nautilus",
+    "org.gnome.Nautilus",
     "firefox",
     "kitty",
     "com.spotify.Client",
