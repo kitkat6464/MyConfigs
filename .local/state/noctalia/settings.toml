@@ -81,8 +81,8 @@ widget_order = [
     [desktop_widgets.widget.desktop-widget-0000000000000001]
     box_height = 128.0
     box_width = 272.0
-    cx = 632.0
-    cy = 156.0
+    cx = 288.0
+    cy = 124.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -92,7 +92,7 @@ widget_order = [
         [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
         background = false
         clock_style = "digital"
-        color = "on_tertiary"
+        color = "on_surface"
         shadow = true
 
     [desktop_widgets.widget.desktop-widget-0000000000000002]
@@ -109,6 +109,8 @@ widget_order = [
         [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
         background = false
         bands = 32
+        color_1 = "error"
+        color_2 = "error"
         show_when_idle = true
 
     [desktop_widgets.widget.desktop-widget-0000000000000003]
@@ -125,13 +127,15 @@ widget_order = [
         [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
         background = false
         bands = 32
+        color_1 = "error"
+        color_2 = "error"
         show_when_idle = true
 
     [desktop_widgets.widget.desktop-widget-0000000000000004]
     box_height = 192.0
     box_width = 192.0
-    cx = 960.0
-    cy = 540.0
+    cx = 1296.0
+    cy = 652.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -140,13 +144,15 @@ widget_order = [
 
         [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
         background = false
+        primary_color = "error"
+        secondary_color = "error"
         visualization_mode = "wave_rings"
 
     [desktop_widgets.widget.desktop-widget-0000000000000005]
     box_height = 128.0
     box_width = 256.0
-    cx = 1280.0
-    cy = 156.0
+    cx = 427.0
+    cy = 204.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -155,15 +161,15 @@ widget_order = [
 
         [desktop_widgets.widget.desktop-widget-0000000000000005.settings]
         background = false
-        color = "on_tertiary"
+        color = "on_surface"
         shadow = true
         show_forecast = false
 
     [desktop_widgets.widget.desktop-widget-0000000000000007]
     box_height = 192.0
     box_width = 192.0
-    cx = 224.0
-    cy = 828.0
+    cx = 896.0
+    cy = 476.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -172,13 +178,15 @@ widget_order = [
 
         [desktop_widgets.widget.desktop-widget-0000000000000007.settings]
         background = false
+        primary_color = "error"
+        secondary_color = "error"
         visualization_mode = "wave_rings"
 
     [desktop_widgets.widget.desktop-widget-0000000000000008]
     box_height = 192.0
     box_width = 192.0
-    cx = 1696.0
-    cy = 828.0
+    cx = 1664.0
+    cy = 220.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -187,13 +195,15 @@ widget_order = [
 
         [desktop_widgets.widget.desktop-widget-0000000000000008.settings]
         background = false
+        primary_color = "error"
+        secondary_color = "error"
         visualization_mode = "wave_rings"
 
     [desktop_widgets.widget.desktop-widget-0000000000000009]
-    box_height = 144.0
-    box_width = 336.0
-    cx = 960.0
-    cy = 308.0
+    box_height = 0.0
+    box_width = 0.0
+    cx = 392.0
+    cy = 406.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -202,8 +212,15 @@ widget_order = [
 
         [desktop_widgets.widget.desktop-widget-0000000000000009.settings]
         background = true
+        background_color = "surface"
+        background_opacity = 0.80000000000000004
+        background_padding = 10
+        background_radius = 12
+        color = "on_surface"
+        font_family = ""
         hide_when_no_media = true
         layout = "horizontal"
+        shadow = true
 
 [dock]
 background_opacity = 0.4999999888241291
@@ -247,8 +264,8 @@ widget_order = [
     "lockscreen-widget-0000000000000004",
     "lockscreen-widget-0000000000000006",
     "lockscreen-widget-0000000000000007",
-    "lockscreen-widget-0000000000000008",
-    "lockscreen-widget-0000000000000009"
+    "lockscreen-widget-0000000000000009",
+    "lockscreen-widget-000000000000000a"
 ]
 
     [lockscreen_widgets.grid]
@@ -297,6 +314,8 @@ widget_order = [
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
         background = false
         bands = 32
+        color_1 = "error"
+        color_2 = "error"
         show_when_idle = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
@@ -313,6 +332,8 @@ widget_order = [
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
         background = false
         bands = 32
+        color_1 = "error"
+        color_2 = "error"
         show_when_idle = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
@@ -329,6 +350,8 @@ widget_order = [
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
         background = false
         fade_when_idle = true
+        primary_color = "error"
+        secondary_color = "error"
         visualization_mode = "wave_rings"
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000004]
@@ -344,7 +367,7 @@ widget_order = [
 
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
         background = false
-        color = "on_tertiary"
+        color = "on_surface"
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000006]
     box_height = 192.0
@@ -360,6 +383,8 @@ widget_order = [
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000006.settings]
         background = false
         fade_when_idle = true
+        primary_color = "error"
+        secondary_color = "error"
         visualization_mode = "wave_rings"
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000007]
@@ -376,21 +401,9 @@ widget_order = [
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000007.settings]
         background = false
         fade_when_idle = true
+        primary_color = "error"
+        secondary_color = "error"
         visualization_mode = "wave_rings"
-
-    [lockscreen_widgets.widget.lockscreen-widget-0000000000000008]
-    box_height = 0.0
-    box_width = 0.0
-    cx = 960.0
-    cy = 918.0
-    output = "DP-2"
-    placement_height = 1080.0
-    placement_width = 1920.0
-    rotation = 0.0
-    type = "media_player"
-
-        [lockscreen_widgets.widget.lockscreen-widget-0000000000000008.settings]
-        hide_when_no_media = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000009]
     box_height = 128.0
@@ -405,8 +418,22 @@ widget_order = [
 
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000009.settings]
         background = false
-        color = "on_tertiary"
+        color = "on_surface"
         show_forecast = false
+
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000000a]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 960.0
+    cy = 918.0
+    output = "DP-2"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "media_player"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000000a.settings]
+        hide_when_no_media = true
 
 [notification]
 background_opacity = 0.4999999888241291
@@ -499,7 +526,7 @@ settings_window_translucent = true
     variant = "destructive"
 
 [theme]
-builtin = "Rosé Pine"
+builtin = "Nord"
 
     [theme.templates]
     builtin_ids = [
@@ -532,13 +559,13 @@ directory = "/home/catrina/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/catrina/Pictures/Wallpapers/wallhaven-jew2dq_1920x1080.png"
+    path = "/home/catrina/Pictures/Wallpapers/wallhaven-jxlp8q_1920x1080.png"
 
     [wallpaper.last]
-    path = "/home/catrina/Pictures/Wallpapers/wallhaven-jew2dq_1920x1080.png"
+    path = "/home/catrina/Pictures/Wallpapers/wallhaven-jxlp8q_1920x1080.png"
 
     [wallpaper.monitors.DP-2]
-    path = "/home/catrina/Pictures/Wallpapers/wallhaven-jew2dq_1920x1080.png"
+    path = "/home/catrina/Pictures/Wallpapers/wallhaven-jxlp8q_1920x1080.png"
 
 [widget.active_window]
 display = "text_only"
