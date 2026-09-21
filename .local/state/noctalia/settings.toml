@@ -1,5 +1,3 @@
-config_version = 14
-
 [bar.default]
 background_opacity = 0.4999999888241291
 capsule = true
@@ -417,6 +415,44 @@ settings_window_translucent = true
 
     [shell.screenshot]
     confirm_region = true
+
+    [[shell.session.actions]]
+    action = "lock"
+    countdown_seconds = 3.0
+    enabled = true
+    shortcut = "1"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "logout"
+    countdown_seconds = 3.0
+    enabled = true
+    shortcut = "2"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    countdown_seconds = 3.0
+    enabled = true
+    label = "Hard Reboot"
+    shortcut = "3"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    command = "systemctl soft-reboot"
+    countdown_seconds = 3.0
+    enabled = true
+    label = "Soft Reboot"
+    shortcut = "4"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    countdown_seconds = 3.0
+    enabled = true
+    shortcut = "5"
+    variant = "destructive"
 
 [theme]
 builtin = "Rosé Pine"
