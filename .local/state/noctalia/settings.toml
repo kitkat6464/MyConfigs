@@ -376,6 +376,7 @@ background_opacity = 0.4999999888241291
 auto_update = "official"
 
 [shell]
+avatar_path = "/home/catrina/Pictures/PFPs/pfp1.png"
 password_style = "random"
 polkit_agent = true
 screen_time_enabled = true
@@ -415,6 +416,7 @@ settings_window_translucent = true
 
     [shell.screenshot]
     confirm_region = true
+    directory = "/home/catrina/Pictures/Screenshots"
 
     [[shell.session.actions]]
     action = "lock"
@@ -484,6 +486,7 @@ builtin = "Rosé Pine"
     community_ids = [ "pywalfox-beta4" ]
 
 [wallpaper]
+directory = "/home/catrina/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
