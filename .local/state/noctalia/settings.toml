@@ -81,8 +81,8 @@ widget_order = [
     [desktop_widgets.widget.desktop-widget-0000000000000001]
     box_height = 128.0
     box_width = 272.0
-    cx = 232.0
-    cy = 124.0
+    cx = 632.0
+    cy = 156.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -90,11 +90,14 @@ widget_order = [
     type = "clock"
 
         [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+        background = false
         clock_style = "digital"
+        color = "on_tertiary"
+        shadow = true
 
     [desktop_widgets.widget.desktop-widget-0000000000000002]
     box_height = 48.0
-    box_width = 320.0
+    box_width = 384.0
     cx = 224.0
     cy = 1028.0
     output = "DP-2"
@@ -104,12 +107,13 @@ widget_order = [
     type = "audio_visualizer"
 
         [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
+        background = false
         bands = 32
         show_when_idle = true
 
     [desktop_widgets.widget.desktop-widget-0000000000000003]
     box_height = 48.0
-    box_width = 320.0
+    box_width = 384.0
     cx = 1696.0
     cy = 1028.0
     output = "DP-2"
@@ -119,6 +123,7 @@ widget_order = [
     type = "audio_visualizer"
 
         [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
+        background = false
         bands = 32
         show_when_idle = true
 
@@ -126,7 +131,7 @@ widget_order = [
     box_height = 192.0
     box_width = 192.0
     cx = 960.0
-    cy = 412.0
+    cy = 540.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -135,23 +140,30 @@ widget_order = [
 
         [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
         background = false
+        visualization_mode = "wave_rings"
 
     [desktop_widgets.widget.desktop-widget-0000000000000005]
     box_height = 128.0
     box_width = 256.0
-    cx = 1696.0
-    cy = 124.0
+    cx = 1280.0
+    cy = 156.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
     rotation = 0.0
     type = "weather"
 
+        [desktop_widgets.widget.desktop-widget-0000000000000005.settings]
+        background = false
+        color = "on_tertiary"
+        shadow = true
+        show_forecast = false
+
     [desktop_widgets.widget.desktop-widget-0000000000000007]
     box_height = 192.0
     box_width = 192.0
     cx = 224.0
-    cy = 892.0
+    cy = 828.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -160,12 +172,13 @@ widget_order = [
 
         [desktop_widgets.widget.desktop-widget-0000000000000007.settings]
         background = false
+        visualization_mode = "wave_rings"
 
     [desktop_widgets.widget.desktop-widget-0000000000000008]
     box_height = 192.0
     box_width = 192.0
     cx = 1696.0
-    cy = 892.0
+    cy = 828.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -174,12 +187,13 @@ widget_order = [
 
         [desktop_widgets.widget.desktop-widget-0000000000000008.settings]
         background = false
+        visualization_mode = "wave_rings"
 
     [desktop_widgets.widget.desktop-widget-0000000000000009]
-    box_height = 0.0
-    box_width = 0.0
+    box_height = 144.0
+    box_width = 336.0
     cx = 960.0
-    cy = 210.0
+    cy = 308.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -187,7 +201,9 @@ widget_order = [
     type = "media_player"
 
         [desktop_widgets.widget.desktop-widget-0000000000000009.settings]
+        background = true
         hide_when_no_media = true
+        layout = "horizontal"
 
 [dock]
 background_opacity = 0.4999999888241291
@@ -231,7 +247,8 @@ widget_order = [
     "lockscreen-widget-0000000000000004",
     "lockscreen-widget-0000000000000006",
     "lockscreen-widget-0000000000000007",
-    "lockscreen-widget-0000000000000008"
+    "lockscreen-widget-0000000000000008",
+    "lockscreen-widget-0000000000000009"
 ]
 
     [lockscreen_widgets.grid]
@@ -240,10 +257,10 @@ widget_order = [
     visible = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
-    box_height = 196.0
-    box_width = 752.0
-    cx = 963.0
-    cy = 686.0
+    box_height = 70.0
+    box_width = 400.0
+    cx = 960.0
+    cy = 748.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -257,7 +274,7 @@ widget_order = [
         center_password_text = false
         input_opacity = 1.0
         input_radius = 6.0
-        layout = "regular"
+        layout = "compact"
         show_caps_lock = true
         show_keyboard_layout = true
         show_login_button = true
@@ -268,7 +285,7 @@ widget_order = [
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
     box_height = 48.0
-    box_width = 320.0
+    box_width = 448.0
     cx = 224.0
     cy = 1028.0
     output = "DP-2"
@@ -278,12 +295,13 @@ widget_order = [
     type = "audio_visualizer"
 
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background = false
         bands = 32
         show_when_idle = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
     box_height = 48.0
-    box_width = 320.0
+    box_width = 448.0
     cx = 1696.0
     cy = 1028.0
     output = "DP-2"
@@ -293,6 +311,7 @@ widget_order = [
     type = "audio_visualizer"
 
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
+        background = false
         bands = 32
         show_when_idle = true
 
@@ -300,7 +319,7 @@ widget_order = [
     box_height = 192.0
     box_width = 192.0
     cx = 960.0
-    cy = 412.0
+    cy = 540.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -310,23 +329,28 @@ widget_order = [
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
         background = false
         fade_when_idle = true
+        visualization_mode = "wave_rings"
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000004]
     box_height = 128.0
     box_width = 256.0
     cx = 960.0
-    cy = 220.0
+    cy = 252.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
     rotation = 0.0
     type = "clock"
 
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
+        background = false
+        color = "on_tertiary"
+
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000006]
     box_height = 192.0
     box_width = 192.0
     cx = 224.0
-    cy = 892.0
+    cy = 828.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -336,12 +360,13 @@ widget_order = [
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000006.settings]
         background = false
         fade_when_idle = true
+        visualization_mode = "wave_rings"
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000007]
     box_height = 192.0
     box_width = 192.0
     cx = 1696.0
-    cy = 892.0
+    cy = 828.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -351,6 +376,7 @@ widget_order = [
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000007.settings]
         background = false
         fade_when_idle = true
+        visualization_mode = "wave_rings"
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000008]
     box_height = 0.0
@@ -365,6 +391,22 @@ widget_order = [
 
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000008.settings]
         hide_when_no_media = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000009]
+    box_height = 128.0
+    box_width = 256.0
+    cx = 976.0
+    cy = 348.0
+    output = "DP-2"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "weather"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000009.settings]
+        background = false
+        color = "on_tertiary"
+        show_forecast = false
 
 [notification]
 background_opacity = 0.4999999888241291
