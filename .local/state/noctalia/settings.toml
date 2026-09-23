@@ -486,6 +486,7 @@ settings_window_translucent = true
     [shell.screenshot]
     confirm_region = true
     directory = "/home/catrina/Pictures/Screenshots"
+    remember_last_region = true
 
     [[shell.session.actions]]
     action = "lock"
