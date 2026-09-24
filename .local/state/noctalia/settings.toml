@@ -38,6 +38,11 @@ widget_spacing = 8
     opacity = 1.0
     padding = 6.0
 
+[brightness]
+enable_ddcutil = true
+minimum_brightness = 0.14999999664723873
+sync_all_monitors = true
+
 [calendar]
 enabled = true
 
