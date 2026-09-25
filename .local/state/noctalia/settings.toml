@@ -1,11 +1,10 @@
 [bar.default]
 background_opacity = 0.04999999888241291
 capsule = true
-center = [ "media", "weather", "clock", "audio_visualizer" ]
+center = [ "media", "clock", "audio_visualizer" ]
 end = [ "group:g1", "group:g2", "tray", "notifications", "volume", "control-center" ]
 shadow = false
 start = [ "privacy", "workspaces", "active_window" ]
-widget_spacing = 8
 
     [bar.default.dead_zone.actions]
     back = "none"
@@ -458,6 +457,7 @@ popup_shadows = false
 screen_time_enabled = true
 settings_show_advanced = false
 settings_window_translucent = true
+telemetry_enabled = true
 
     [shell.greeter_sync]
     auto_sync = true
@@ -581,6 +581,10 @@ title_scroll = "on_hover"
 
 [widget.audio_visualizer]
 show_when_idle = true
+width = 112
+
+[widget.clock]
+format = "{:%B %d, %H:%M}"
 
 [widget.cpu-mon]
 type = "sysmon"
@@ -622,5 +626,5 @@ stat = "gpu_vram_used"
 type = "sysmon"
 visualization = "none"
 
-[widget.weather]
-show_condition = false
+[widget.workspaces]
+style = "minimal"
