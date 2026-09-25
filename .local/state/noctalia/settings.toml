@@ -1,5 +1,5 @@
 [bar.default]
-background_opacity = 0.4999999888241291
+background_opacity = 0.04999999888241291
 capsule = true
 center = [ "media", "weather", "clock", "audio_visualizer" ]
 end = [ "group:g1", "group:g2", "tray", "notifications", "volume", "control-center" ]
@@ -218,7 +218,7 @@ widget_order = [
         [desktop_widgets.widget.desktop-widget-0000000000000009.settings]
         background = true
         background_color = "surface"
-        background_opacity = 0.80000000000000004
+        background_opacity = 0.25
         background_padding = 10
         background_radius = 12
         color = "on_surface"
@@ -228,7 +228,7 @@ widget_order = [
         shadow = true
 
 [dock]
-background_opacity = 0.4999999888241291
+background_opacity = 0.04999999888241291
 enabled = true
 icon_size = 44
 launcher_position = "start"
@@ -438,13 +438,14 @@ widget_order = [
     type = "media_player"
 
         [lockscreen_widgets.widget.lockscreen-widget-000000000000000a.settings]
+        background_opacity = 0.25
         hide_when_no_media = true
 
 [notification]
-background_opacity = 0.4999999888241291
+background_opacity = 0.04999999888241291
 
 [osd]
-background_opacity = 0.4999999888241291
+background_opacity = 0.04999999888241291
 
 [plugins]
 auto_update = "official"
@@ -453,6 +454,7 @@ auto_update = "official"
 avatar_path = "/home/catrina/Pictures/PFPs/pfp1.png"
 password_style = "random"
 polkit_agent = true
+popup_shadows = false
 screen_time_enabled = true
 settings_show_advanced = false
 settings_window_translucent = true
@@ -483,7 +485,7 @@ settings_window_translucent = true
     polkit_placement = "attached"
     session_position = "center"
     shadow = false
-    transparency_mode = "soft"
+    transparency_mode = "glass"
 
     [shell.screen_corners]
     enabled = true
