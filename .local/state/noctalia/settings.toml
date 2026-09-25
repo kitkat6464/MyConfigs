@@ -2,7 +2,7 @@
 background_opacity = 0.04999999888241291
 capsule = true
 center = [ "media", "clock", "audio_visualizer" ]
-end = [ "group:g1", "group:g2", "tray", "notifications", "volume", "control-center" ]
+end = [ "group:g1", "group:g2", "volume", "notifications", "tray", "control-center" ]
 shadow = false
 start = [ "privacy", "workspaces", "active_window" ]
 
@@ -24,7 +24,7 @@ start = [ "privacy", "workspaces", "active_window" ]
     fill = "surface_variant"
     id = "g1"
     members = [ "cpu-mon", "cpu-temp", "ram-used" ]
-    opacity = 1.0
+    opacity = 0.75
     padding = 6.0
 
     [[bar.default.capsule_group]]
@@ -34,7 +34,7 @@ start = [ "privacy", "workspaces", "active_window" ]
     fill = "surface_variant"
     id = "g2"
     members = [ "gpu-mon", "gpu-temp", "vram-used" ]
-    opacity = 1.0
+    opacity = 0.75
     padding = 6.0
 
 [brightness]
@@ -217,7 +217,7 @@ widget_order = [
         [desktop_widgets.widget.desktop-widget-0000000000000009.settings]
         background = true
         background_color = "surface"
-        background_opacity = 0.25
+        background_opacity = 0.5
         background_padding = 10
         background_radius = 12
         color = "on_surface"
@@ -437,14 +437,24 @@ widget_order = [
     type = "media_player"
 
         [lockscreen_widgets.widget.lockscreen-widget-000000000000000a.settings]
-        background_opacity = 0.25
+        background = true
+        background_color = "surface"
+        background_opacity = 0.5
+        background_padding = 10
+        background_radius = 12
+        color = "on_surface"
+        font_family = ""
         hide_when_no_media = true
+        layout = "horizontal"
+        shadow = true
 
 [notification]
 background_opacity = 0.04999999888241291
+border = false
 
 [osd]
 background_opacity = 0.04999999888241291
+border = false
 
 [plugins]
 auto_update = "official"
@@ -576,55 +586,93 @@ transition_on_startup = true
     path = "/home/catrina/Pictures/Wallpapers/wallhaven-jxlp8q_1920x1080.png"
 
 [widget.active_window]
+capsule = true
+capsule_opacity = 0.75
 display = "text_only"
 title_scroll = "on_hover"
 
 [widget.audio_visualizer]
+capsule = true
+capsule_opacity = 0.75
 show_when_idle = true
 width = 112
 
 [widget.clock]
+capsule = true
+capsule_opacity = 0.75
 format = "{:%B %d, %H:%M}"
 
+[widget.control-center]
+capsule = true
+capsule_opacity = 0.75
+
 [widget.cpu-mon]
+capsule = true
+capsule_opacity = 0.75
 type = "sysmon"
 visualization = "none"
 
 [widget.cpu-temp]
+capsule = true
+capsule_opacity = 0.75
 stat = "cpu_temp"
 type = "sysmon"
 visualization = "none"
 
 [widget.gpu-mon]
+capsule = true
+capsule_opacity = 0.75
 stat = "gpu_usage"
 type = "sysmon"
 visualization = "none"
 
 [widget.gpu-temp]
+capsule = true
+capsule_opacity = 0.75
 stat = "gpu_temp"
 type = "sysmon"
 visualization = "none"
 
 [widget.media]
 artist_first = true
+capsule = true
+capsule_opacity = 0.75
 show_progress = true
 title_scroll = "on_hover"
 
+[widget.notifications]
+capsule = true
+capsule_opacity = 0.75
+
+[widget.privacy]
+capsule = true
+capsule_opacity = 0.75
+
 [widget.ram-used]
+capsule = true
+capsule_opacity = 0.75
 stat = "ram_used"
 type = "sysmon"
 visualization = "none"
 
 [widget.tray]
+capsule = true
+capsule_opacity = 0.75
 drawer = true
 
 [widget.volume]
+capsule = true
+capsule_opacity = 0.75
 show_label = false
 
 [widget.vram-used]
+capsule = true
+capsule_opacity = 0.75
 stat = "gpu_vram_used"
 type = "sysmon"
 visualization = "none"
 
 [widget.workspaces]
+capsule = true
+capsule_opacity = 0.75
 style = "minimal"
