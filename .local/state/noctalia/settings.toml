@@ -68,13 +68,11 @@ type = "clipboard"
 schema_version = 2
 widget_order = [
     "desktop-widget-0000000000000001",
-    "desktop-widget-0000000000000002",
     "desktop-widget-0000000000000003",
-    "desktop-widget-0000000000000004",
     "desktop-widget-0000000000000005",
     "desktop-widget-0000000000000007",
-    "desktop-widget-0000000000000008",
-    "desktop-widget-0000000000000009"
+    "desktop-widget-0000000000000009",
+    "desktop-widget-000000000000000a"
 ]
 
     [desktop_widgets.grid]
@@ -85,7 +83,7 @@ widget_order = [
     [desktop_widgets.widget.desktop-widget-0000000000000001]
     box_height = 128.0
     box_width = 272.0
-    cx = 288.0
+    cx = 296.0
     cy = 124.0
     output = "DP-2"
     placement_height = 1080.0
@@ -95,33 +93,24 @@ widget_order = [
 
         [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
         background = false
+        background_color = "surface"
+        background_opacity = 0.80000000000000004
+        background_padding = 10
+        background_radius = 12
+        center_text = true
+        circle = true
         clock_style = "digital"
-        color = "on_surface"
-        shadow = true
-
-    [desktop_widgets.widget.desktop-widget-0000000000000002]
-    box_height = 48.0
-    box_width = 384.0
-    cx = 224.0
-    cy = 1028.0
-    output = "DP-2"
-    placement_height = 1080.0
-    placement_width = 1920.0
-    rotation = 0.0
-    type = "audio_visualizer"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
-        background = false
-        bands = 32
-        color_1 = "error"
-        color_2 = "error"
-        show_when_idle = true
+        color = "primary"
+        font_family = ""
+        format = "{:%H:%M}"
+        shadow = false
+        timezone = ""
 
     [desktop_widgets.widget.desktop-widget-0000000000000003]
     box_height = 48.0
-    box_width = 384.0
-    cx = 1696.0
-    cy = 1028.0
+    box_width = 368.0
+    cx = 1728.0
+    cy = 1044.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -129,33 +118,18 @@ widget_order = [
     type = "audio_visualizer"
 
         [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
-        background = false
+        background = true
+        background_color = "tertiary"
+        background_opacity = 0.70000000000000007
         bands = 32
-        color_1 = "error"
-        color_2 = "error"
+        color_1 = "primary"
+        color_2 = "primary"
         show_when_idle = true
-
-    [desktop_widgets.widget.desktop-widget-0000000000000004]
-    box_height = 192.0
-    box_width = 192.0
-    cx = 1296.0
-    cy = 652.0
-    output = "DP-2"
-    placement_height = 1080.0
-    placement_width = 1920.0
-    rotation = 0.0
-    type = "fancy_audio_visualizer"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
-        background = false
-        primary_color = "error"
-        secondary_color = "error"
-        visualization_mode = "wave_rings"
 
     [desktop_widgets.widget.desktop-widget-0000000000000005]
     box_height = 128.0
     box_width = 256.0
-    cx = 427.0
+    cx = 448.0
     cy = 204.0
     output = "DP-2"
     placement_height = 1080.0
@@ -165,15 +139,21 @@ widget_order = [
 
         [desktop_widgets.widget.desktop-widget-0000000000000005.settings]
         background = false
-        color = "on_surface"
-        shadow = true
+        background_color = "surface"
+        background_opacity = 0.80000000000000004
+        background_padding = 10
+        background_radius = 12
+        color = "primary"
+        font_family = ""
+        forecast_days = 3
+        shadow = false
         show_forecast = false
 
     [desktop_widgets.widget.desktop-widget-0000000000000007]
-    box_height = 192.0
-    box_width = 192.0
-    cx = 896.0
-    cy = 476.0
+    box_height = 256.0
+    box_width = 272.0
+    cx = 544.0
+    cy = 444.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -182,32 +162,27 @@ widget_order = [
 
         [desktop_widgets.widget.desktop-widget-0000000000000007.settings]
         background = false
-        primary_color = "error"
-        secondary_color = "error"
+        background_color = "surface"
+        background_opacity = 0.80000000000000004
+        background_padding = 10
+        background_radius = 12
+        bar_width = 0.59999999999999998
+        bloom_intensity = 0.5
+        fade_when_idle = true
+        inner_diameter = 0.69999999999999996
+        primary_color = "primary"
+        ring_opacity = 0.70000000000000007
+        rotation_speed = 0.5
+        secondary_color = "tertiary"
+        sensitivity = 1.5
         visualization_mode = "wave_rings"
-
-    [desktop_widgets.widget.desktop-widget-0000000000000008]
-    box_height = 192.0
-    box_width = 192.0
-    cx = 1664.0
-    cy = 220.0
-    output = "DP-2"
-    placement_height = 1080.0
-    placement_width = 1920.0
-    rotation = 0.0
-    type = "fancy_audio_visualizer"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000008.settings]
-        background = false
-        primary_color = "error"
-        secondary_color = "error"
-        visualization_mode = "wave_rings"
+        wave_thickness = 1.0
 
     [desktop_widgets.widget.desktop-widget-0000000000000009]
     box_height = 0.0
     box_width = 0.0
-    cx = 392.0
-    cy = 406.0
+    cx = 1347.0
+    cy = 204.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -216,15 +191,35 @@ widget_order = [
 
         [desktop_widgets.widget.desktop-widget-0000000000000009.settings]
         background = true
-        background_color = "surface"
-        background_opacity = 0.5
+        background_color = "tertiary"
+        background_opacity = 0.70000000000000007
         background_padding = 10
         background_radius = 12
         color = "on_surface"
         font_family = ""
-        hide_when_no_media = true
+        hide_when_no_media = false
         layout = "horizontal"
-        shadow = true
+        shadow = false
+
+    [desktop_widgets.widget.desktop-widget-000000000000000a]
+    box_height = 48.0
+    box_width = 368.0
+    cx = 192.0
+    cy = 1044.0
+    output = "DP-2"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-000000000000000a.settings]
+        background = true
+        background_color = "tertiary"
+        background_opacity = 0.70000000000000007
+        bands = 32
+        color_1 = "primary"
+        color_2 = "primary"
+        show_when_idle = true
 
 [dock]
 background_opacity = 0.04999999888241291
@@ -263,12 +258,11 @@ schema_version = 2
 widget_order = [
     "lockscreen-login-box@DP-2",
     "lockscreen-widget-0000000000000001",
-    "lockscreen-widget-0000000000000002",
     "lockscreen-widget-0000000000000003",
     "lockscreen-widget-0000000000000004",
-    "lockscreen-widget-0000000000000006",
-    "lockscreen-widget-0000000000000007",
-    "lockscreen-widget-000000000000000a"
+    "lockscreen-widget-000000000000000a",
+    "lockscreen-widget-000000000000000b",
+    "lockscreen-widget-000000000000000c"
 ]
 
     [lockscreen_widgets.grid]
@@ -280,7 +274,7 @@ widget_order = [
     box_height = 196.0
     box_width = 810.0
     cx = 960.0
-    cy = 734.0
+    cy = 554.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -288,8 +282,8 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
-        background_color = "surface_variant"
-        background_opacity = 0.5
+        background_color = "tertiary"
+        background_opacity = 0.70000000000000007
         background_radius = 12.0
         center_password_text = true
         input_opacity = 1.0
@@ -304,10 +298,10 @@ widget_order = [
         show_weather = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
-    box_height = 48.0
-    box_width = 448.0
-    cx = 224.0
-    cy = 1028.0
+    box_height = 80.0
+    box_width = 640.0
+    cx = 960.0
+    cy = 764.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -315,35 +309,19 @@ widget_order = [
     type = "audio_visualizer"
 
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
-        background = false
+        background = true
+        background_color = "tertiary"
+        background_opacity = 0.70000000000000007
         bands = 32
-        color_1 = "error"
-        color_2 = "error"
-        show_when_idle = true
-
-    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
-    box_height = 48.0
-    box_width = 448.0
-    cx = 1696.0
-    cy = 1028.0
-    output = "DP-2"
-    placement_height = 1080.0
-    placement_width = 1920.0
-    rotation = 0.0
-    type = "audio_visualizer"
-
-        [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
-        background = false
-        bands = 32
-        color_1 = "error"
-        color_2 = "error"
+        color_1 = "primary"
+        color_2 = "primary"
         show_when_idle = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
     box_height = 192.0
     box_width = 192.0
     cx = 960.0
-    cy = 476.0
+    cy = 284.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -353,15 +331,16 @@ widget_order = [
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
         background = false
         fade_when_idle = true
-        primary_color = "error"
-        secondary_color = "error"
+        primary_color = "primary"
+        ring_opacity = 0.70000000000000007
+        secondary_color = "tertiary"
         visualization_mode = "wave_rings"
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000004]
     box_height = 128.0
     box_width = 256.0
     cx = 960.0
-    cy = 300.0
+    cy = 124.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -370,49 +349,14 @@ widget_order = [
 
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
         background = false
-        color = "on_surface"
-
-    [lockscreen_widgets.widget.lockscreen-widget-0000000000000006]
-    box_height = 192.0
-    box_width = 192.0
-    cx = 224.0
-    cy = 828.0
-    output = "DP-2"
-    placement_height = 1080.0
-    placement_width = 1920.0
-    rotation = 0.0
-    type = "fancy_audio_visualizer"
-
-        [lockscreen_widgets.widget.lockscreen-widget-0000000000000006.settings]
-        background = false
-        fade_when_idle = true
-        primary_color = "error"
-        secondary_color = "error"
-        visualization_mode = "wave_rings"
-
-    [lockscreen_widgets.widget.lockscreen-widget-0000000000000007]
-    box_height = 192.0
-    box_width = 192.0
-    cx = 1696.0
-    cy = 828.0
-    output = "DP-2"
-    placement_height = 1080.0
-    placement_width = 1920.0
-    rotation = 0.0
-    type = "fancy_audio_visualizer"
-
-        [lockscreen_widgets.widget.lockscreen-widget-0000000000000007.settings]
-        background = false
-        fade_when_idle = true
-        primary_color = "error"
-        secondary_color = "error"
-        visualization_mode = "wave_rings"
+        color = "primary"
+        shadow = false
 
     [lockscreen_widgets.widget.lockscreen-widget-000000000000000a]
     box_height = 0.0
     box_width = 0.0
     cx = 960.0
-    cy = 946.0
+    cy = 950.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -421,15 +365,53 @@ widget_order = [
 
         [lockscreen_widgets.widget.lockscreen-widget-000000000000000a.settings]
         background = true
-        background_color = "surface"
-        background_opacity = 0.5
+        background_color = "tertiary"
+        background_opacity = 0.70000000000000007
         background_padding = 10
         background_radius = 12
         color = "on_surface"
         font_family = ""
-        hide_when_no_media = true
+        hide_when_no_media = false
         layout = "horizontal"
-        shadow = true
+        shadow = false
+
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000000b]
+    box_height = 192.0
+    box_width = 192.0
+    cx = 1728.0
+    cy = 540.0
+    output = "DP-2"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "fancy_audio_visualizer"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000000b.settings]
+        background = false
+        fade_when_idle = true
+        primary_color = "primary"
+        ring_opacity = 0.70000000000000007
+        secondary_color = "tertiary"
+        visualization_mode = "wave_rings"
+
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000000c]
+    box_height = 192.0
+    box_width = 192.0
+    cx = 192.0
+    cy = 540.0
+    output = "DP-2"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "fancy_audio_visualizer"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000000c.settings]
+        background = false
+        fade_when_idle = true
+        primary_color = "primary"
+        ring_opacity = 0.70000000000000007
+        secondary_color = "tertiary"
+        visualization_mode = "wave_rings"
 
 [notification]
 background_opacity = 0.04999999888241291
@@ -560,13 +542,13 @@ directory = "/home/catrina/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/catrina/Pictures/Wallpapers/wallhaven-jxlp8q_1920x1080.png"
+    path = "/home/catrina/Pictures/Wallpapers/wallhaven-exvklr_1920x1080.png"
 
     [wallpaper.last]
-    path = "/home/catrina/Pictures/Wallpapers/wallhaven-jxlp8q_1920x1080.png"
+    path = "/home/catrina/Pictures/Wallpapers/wallhaven-exvklr_1920x1080.png"
 
     [wallpaper.monitors.DP-2]
-    path = "/home/catrina/Pictures/Wallpapers/wallhaven-jxlp8q_1920x1080.png"
+    path = "/home/catrina/Pictures/Wallpapers/wallhaven-exvklr_1920x1080.png"
 
 [widget.active_window]
 capsule = true
