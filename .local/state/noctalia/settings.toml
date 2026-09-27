@@ -1,10 +1,10 @@
 [bar.default]
 background_opacity = 0.04999999888241291
 capsule = true
-center = [ "media", "clock", "audio_visualizer" ]
-end = [ "group:g1", "group:g2", "volume", "notifications", "tray", "control-center" ]
+center = [ "clock", "workspaces", "weather" ]
+end = [ "group:g1", "group:g2", "tray", "volume", "notifications", "control-center" ]
 shadow = false
-start = [ "privacy", "workspaces", "active_window" ]
+start = [ "privacy", "media", "audio_visualizer" ]
 
     [bar.default.dead_zone.actions]
     back = "none"
@@ -585,22 +585,14 @@ transition_on_startup = true
     [wallpaper.monitors.DP-2]
     path = "/home/catrina/Pictures/Wallpapers/wallhaven-jxlp8q_1920x1080.png"
 
-[widget.active_window]
-capsule = true
-capsule_opacity = 0.75
-display = "text_only"
-title_scroll = "on_hover"
-
 [widget.audio_visualizer]
 capsule = true
 capsule_opacity = 0.75
 show_when_idle = true
-width = 112
 
 [widget.clock]
 capsule = true
 capsule_opacity = 0.75
-format = "{:%B %d, %H:%M}"
 
 [widget.control-center]
 capsule = true
@@ -634,7 +626,6 @@ type = "sysmon"
 visualization = "none"
 
 [widget.media]
-artist_first = true
 capsule = true
 capsule_opacity = 0.75
 show_progress = true
@@ -671,6 +662,11 @@ capsule_opacity = 0.75
 stat = "gpu_vram_used"
 type = "sysmon"
 visualization = "none"
+
+[widget.weather]
+capsule = true
+capsule_opacity = 0.75
+show_condition = false
 
 [widget.workspaces]
 capsule = true
