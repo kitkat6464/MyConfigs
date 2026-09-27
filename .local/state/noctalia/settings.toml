@@ -1,10 +1,10 @@
 [bar.default]
 background_opacity = 0.04999999888241291
 capsule = true
-center = [ "clock", "workspaces", "weather" ]
+center = [ "weather", "active_window", "clock" ]
 end = [ "group:g1", "group:g2", "tray", "volume", "notifications", "control-center" ]
 shadow = false
-start = [ "privacy", "media", "audio_visualizer" ]
+start = [ "privacy", "workspaces", "media", "audio_visualizer" ]
 
     [bar.default.dead_zone.actions]
     back = "none"
@@ -584,6 +584,11 @@ transition_on_startup = true
 
     [wallpaper.monitors.DP-2]
     path = "/home/catrina/Pictures/Wallpapers/wallhaven-jxlp8q_1920x1080.png"
+
+[widget.active_window]
+capsule = true
+capsule_opacity = 0.75
+title_scroll = "on_hover"
 
 [widget.audio_visualizer]
 capsule = true
