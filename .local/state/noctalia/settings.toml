@@ -268,7 +268,6 @@ widget_order = [
     "lockscreen-widget-0000000000000004",
     "lockscreen-widget-0000000000000006",
     "lockscreen-widget-0000000000000007",
-    "lockscreen-widget-0000000000000009",
     "lockscreen-widget-000000000000000a"
 ]
 
@@ -278,10 +277,10 @@ widget_order = [
     visible = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
-    box_height = 70.0
-    box_width = 400.0
+    box_height = 196.0
+    box_width = 810.0
     cx = 960.0
-    cy = 748.0
+    cy = 734.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -290,12 +289,12 @@ widget_order = [
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
         background_color = "surface_variant"
-        background_opacity = 0.88
+        background_opacity = 0.5
         background_radius = 12.0
-        center_password_text = false
+        center_password_text = true
         input_opacity = 1.0
         input_radius = 6.0
-        layout = "compact"
+        layout = "regular"
         show_caps_lock = true
         show_keyboard_layout = true
         show_login_button = true
@@ -344,7 +343,7 @@ widget_order = [
     box_height = 192.0
     box_width = 192.0
     cx = 960.0
-    cy = 540.0
+    cy = 476.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -362,7 +361,7 @@ widget_order = [
     box_height = 128.0
     box_width = 256.0
     cx = 960.0
-    cy = 252.0
+    cy = 300.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -409,27 +408,11 @@ widget_order = [
         secondary_color = "error"
         visualization_mode = "wave_rings"
 
-    [lockscreen_widgets.widget.lockscreen-widget-0000000000000009]
-    box_height = 128.0
-    box_width = 256.0
-    cx = 976.0
-    cy = 348.0
-    output = "DP-2"
-    placement_height = 1080.0
-    placement_width = 1920.0
-    rotation = 0.0
-    type = "weather"
-
-        [lockscreen_widgets.widget.lockscreen-widget-0000000000000009.settings]
-        background = false
-        color = "on_surface"
-        show_forecast = false
-
     [lockscreen_widgets.widget.lockscreen-widget-000000000000000a]
     box_height = 0.0
     box_width = 0.0
     cx = 960.0
-    cy = 918.0
+    cy = 946.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
