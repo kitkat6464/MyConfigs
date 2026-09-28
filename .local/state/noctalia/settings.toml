@@ -445,6 +445,9 @@ telemetry_enabled = true
         [shell.launcher.providers.emoji]
         global = true
 
+        [shell.launcher.providers.panels]
+        global = true
+
         [shell.launcher.providers.session]
         global = true
 
