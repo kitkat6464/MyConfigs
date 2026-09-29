@@ -1,12 +1,13 @@
 [bar.default]
 background_opacity = 0.04999999888241291
 capsule = true
-center = [ "weather", "active_window", "clock" ]
+center = [ "media", "clock", "audio_visualizer" ]
 concave_edge_corners = false
 end = [ "group:g1", "group:g2", "tray", "volume", "notifications", "control-center" ]
 margin_edge = 10
+margin_ends = 10
 shadow = false
-start = [ "privacy", "workspaces", "media", "audio_visualizer" ]
+start = [ "privacy", "workspaces", "active_window" ]
 
     [bar.default.dead_zone.actions]
     back = "none"
@@ -85,8 +86,8 @@ widget_order = [
     [desktop_widgets.widget.desktop-widget-0000000000000001]
     box_height = 128.0
     box_width = 272.0
-    cx = 264.0
-    cy = 156.0
+    cx = 200.0
+    cy = 152.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -105,13 +106,13 @@ widget_order = [
         color = "primary"
         font_family = ""
         format = "{:%H:%M}"
-        shadow = false
+        shadow = true
         timezone = ""
 
     [desktop_widgets.widget.desktop-widget-0000000000000003]
     box_height = 48.0
     box_width = 368.0
-    cx = 1720.0
+    cx = 1728.0
     cy = 1044.0
     output = "DP-2"
     placement_height = 1080.0
@@ -131,8 +132,8 @@ widget_order = [
     [desktop_widgets.widget.desktop-widget-0000000000000005]
     box_height = 128.0
     box_width = 256.0
-    cx = 432.0
-    cy = 236.0
+    cx = 352.0
+    cy = 228.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -148,7 +149,7 @@ widget_order = [
         color = "primary"
         font_family = ""
         forecast_days = 3
-        shadow = false
+        shadow = true
         show_forecast = false
 
     [desktop_widgets.widget.desktop-widget-0000000000000007]
@@ -183,8 +184,8 @@ widget_order = [
     [desktop_widgets.widget.desktop-widget-0000000000000009]
     box_height = 0.0
     box_width = 0.0
-    cx = 1632.0
-    cy = 156.0
+    cx = 1696.0
+    cy = 158.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -201,12 +202,12 @@ widget_order = [
         font_family = ""
         hide_when_no_media = false
         layout = "horizontal"
-        shadow = false
+        shadow = true
 
     [desktop_widgets.widget.desktop-widget-000000000000000a]
     box_height = 48.0
     box_width = 368.0
-    cx = 200.0
+    cx = 192.0
     cy = 1044.0
     output = "DP-2"
     placement_height = 1080.0
@@ -278,7 +279,7 @@ widget_order = [
     box_height = 196.0
     box_width = 810.0
     cx = 960.0
-    cy = 554.0
+    cy = 698.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -305,7 +306,7 @@ widget_order = [
     box_height = 80.0
     box_width = 640.0
     cx = 960.0
-    cy = 764.0
+    cy = 860.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -325,7 +326,7 @@ widget_order = [
     box_height = 192.0
     box_width = 192.0
     cx = 960.0
-    cy = 284.0
+    cy = 412.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -344,7 +345,7 @@ widget_order = [
     box_height = 128.0
     box_width = 256.0
     cx = 960.0
-    cy = 124.0
+    cy = 252.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -354,13 +355,13 @@ widget_order = [
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
         background = false
         color = "primary"
-        shadow = false
+        shadow = true
 
     [lockscreen_widgets.widget.lockscreen-widget-000000000000000a]
     box_height = 0.0
     box_width = 0.0
     cx = 960.0
-    cy = 950.0
+    cy = 994.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -377,13 +378,13 @@ widget_order = [
         font_family = ""
         hide_when_no_media = false
         layout = "horizontal"
-        shadow = false
+        shadow = true
 
     [lockscreen_widgets.widget.lockscreen-widget-000000000000000b]
     box_height = 192.0
     box_width = 192.0
     cx = 1728.0
-    cy = 540.0
+    cy = 668.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -402,7 +403,7 @@ widget_order = [
     box_height = 192.0
     box_width = 192.0
     cx = 192.0
-    cy = 540.0
+    cy = 668.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -639,11 +640,6 @@ capsule_opacity = 0.75
 stat = "gpu_vram_used"
 type = "sysmon"
 visualization = "none"
-
-[widget.weather]
-capsule = true
-capsule_opacity = 0.75
-show_condition = false
 
 [widget.workspaces]
 capsule = true
