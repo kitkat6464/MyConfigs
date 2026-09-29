@@ -223,9 +223,11 @@ widget_order = [
 
 [dock]
 background_opacity = 0.04999999888241291
+concave_edge_corners = false
 enabled = true
-icon_size = 44
+icon_size = 34
 launcher_position = "start"
+margin_edge = 10
 pinned = [
     "org.gnome.Nautilus",
     "firefox",
