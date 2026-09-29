@@ -101,10 +101,11 @@ echo
 #---------------------------------------------------#
 
 echo
-echo "Installing Mango Dependencies"
+echo "Installing MangoWM and Dependencies"
 echo
 
 PKGS=(
+	'mangowm'
 	'wlr-randr'
 	'gnome-keyring'
 	'xdg-desktop-portal-gtk'
