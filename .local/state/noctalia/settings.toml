@@ -238,6 +238,7 @@ pinned = [
     "com.spotify.Client",
     "steam",
     "net.lutris.Lutris",
+    "com.modrinth.ModrinthApp",
     "io.github.kolunmi.Bazaar"
 ]
 reserve_space = false
