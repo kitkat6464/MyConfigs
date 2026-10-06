@@ -2,11 +2,11 @@
         "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
                 "logo": {
                     "type": "kitty",
-                    "source": "/home/catrina/.config/fastfetch/cute-takopii-anime-sticker.png", // https://wallpapers-clan.com/sticker-png/hello-kitty-among-us-pink/
+                    "source": "/home/catrina/.config/fastfetch/adorable-pastel-ghost-kawaii-halloween-sticker.png", // https://wallpapers-clan.com/sticker-png/adorable-pastel-ghost-kawaii-halloween/
                     "height": 15,
-                    "width": 25,
+                    "width": 30,
                     "padding": {
-                        "top": 8,
+                        "top": 6,
                         "left": 4,
                         "right": 4
                     }
