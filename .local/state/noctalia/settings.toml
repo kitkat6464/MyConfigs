@@ -6,6 +6,7 @@ concave_edge_corners = false
 end = [ "group:g1", "group:g2", "tray", "volume", "notifications", "control-center" ]
 margin_edge = 10
 margin_ends = 10
+radius = 16
 shadow = false
 start = [ "privacy", "workspaces", "active_window" ]
 
@@ -487,6 +488,7 @@ auto_update = "official"
 
 [shell]
 avatar_path = "/home/catrina/Pictures/PFPs/pfp1.png"
+corner_radius_scale = 2.0
 password_style = "random"
 polkit_agent = true
 popup_shadows = false
