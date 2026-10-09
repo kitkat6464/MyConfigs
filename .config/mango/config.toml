@@ -9,7 +9,7 @@ XDG_SESSION_TYPE = "wayland"
 
 # var Configuration
 [var]
-term = "kitty"
+term = "xterm-kitty"
 
 # Global Configuration
 [global]
