@@ -386,6 +386,13 @@ tags = 3
 is_fullscreen = 1
 vrr_only_fullscreen = 1
 force_render = 1
+app_id = "^broken$"
+
+[[rule.window_rule]]
+tags = 3
+is_fullscreen = 1
+vrr_only_fullscreen = 1
+force_render = 1
 app_id = "^steam_app.*$"
 
 [[rule.window_rule]]
