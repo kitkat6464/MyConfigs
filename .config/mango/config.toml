@@ -11,9 +11,7 @@ XDG_SESSION_TYPE = "wayland"
 [global]
 
 # Start Noctalia and XDG Stuff
-exec_once = ["noctalia"]
-exec_once = ["xdg-user-dirs-update"]
-exec_once = ["xdg-desktop-portal-wlr"]
+exec_once = ["noctalia", "xdg-user-dirs-update", "xdg-desktop-portal-wlr"]
 
 # Auto Reload Config
 auto_reload_config=1
