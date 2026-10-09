@@ -7,10 +7,6 @@ QT_WAYLAND_DISABLE_WINDOWDECORATION = "1"
 XDG_CURRENT_DESKTOP = "mango"
 XDG_SESSION_TYPE = "wayland"
 
-# var Configuration
-[var]
-term = "xterm-kitty"
-
 # Global Configuration
 [global]
 
