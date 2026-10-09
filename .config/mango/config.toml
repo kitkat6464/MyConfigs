@@ -14,6 +14,9 @@ term = "kitty"
 # Global Configuration
 [global]
 
+# Auto Reload Config
+auto_reload_config=1
+
 # Blur Configuration
 blur = 1
 blur_layer = 1
@@ -198,9 +201,6 @@ border_px = 2
 
 # Noctalia Emergency Start Binding (Used If Noctalia Shell Crashes)
 "SUPER+ALT+0" = "spawn,noctalia"
-
-# Reload Binding
-"SUPER+r" = "reload_config"
 
 # Exit Bindings
 "SUPER+m" = "quit"
