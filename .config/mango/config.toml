@@ -257,9 +257,6 @@ border_px = 2
 "Ctrl+4" = "view,4,0"
 "Ctrl+5" = "view,5,0"
 "Ctrl+6" = "view,6,0"
-"Ctrl+7" = "view,7,0"
-"Ctrl+8" = "view,8,0"
-"Ctrl+9" = "view,9,0"
 
 # Tag Move Bindings
 "Alt+1" = "tag,1,0"
@@ -268,9 +265,6 @@ border_px = 2
 "Alt+4" = "tag,4,0"
 "Alt+5" = "tag,5,0"
 "Alt+6" = "tag,6,0"
-"Alt+7" = "tag,7,0"
-"Alt+8" = "tag,8,0"
-"Alt+9" = "tag,9,0"
 
 # Monitor Switch Bindings
 "alt+shift+Left" = "focusmon,left"
