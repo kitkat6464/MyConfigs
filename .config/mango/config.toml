@@ -110,7 +110,7 @@ scroller_ignore_proportion_single = 0
 new_is_master = 1
 default_master_factor = 0.55
 default_master_count = 1
-tag_num = 6
+tag_num = 4
 smart_gaps = 0
 
 # Dwindle Configuration
@@ -276,16 +276,12 @@ border_px = 2
 "Ctrl+2" = "view,2,0"
 "Ctrl+3" = "view,3,0"
 "Ctrl+4" = "view,4,0"
-"Ctrl+5" = "view,5,0"
-"Ctrl+6" = "view,6,0"
 
 # Tag Move Bindings
 "Alt+1" = "tag,1,0"
 "Alt+2" = "tag,2,0"
 "Alt+3" = "tag,3,0"
 "Alt+4" = "tag,4,0"
-"Alt+5" = "tag,5,0"
-"Alt+6" = "tag,6,0"
 
 # Monitor Switch Bindings
 "alt+shift+Left" = "focusmon,left"
@@ -352,7 +348,7 @@ layout_name = "monocle"
 
 [[rule.tag_rule]]
 id = 2
-layout_name = "monocle"
+layout_name = "scroller"
 
 [[rule.tag_rule]]
 id = 3
@@ -360,14 +356,6 @@ layout_name = "scroller"
 
 [[rule.tag_rule]]
 id = 4
-layout_name = "scroller"
-
-[[rule.tag_rule]]
-id = 5
-layout_name = "scroller"
-
-[[rule.tag_rule]]
-id = 6
 layout_name = "scroller"
 
 # Window Rules
@@ -384,11 +372,11 @@ tags = 1
 app_id = "^spotify$"
 
 [[rule.window_rule]]
-tags = 2
+tags = 1
 app_id = "^steam$"
 
 [[rule.window_rule]]
-tags = 3
+tags = 2
 app_id = "^firefox$"
 
 [[rule.window_rule]]
@@ -397,21 +385,21 @@ app_id = "^firefox$.*"
 title = "^Library$"
 
 [[rule.window_rule]]
-tags = 3
+tags = 2
 is_fullscreen = 1
 vrr_only_fullscreen = 1
 force_render = 1
 app_id = "^gamescope$"
 
 [[rule.window_rule]]
-tags = 3
+tags = 2
 is_fullscreen = 1
 vrr_only_fullscreen = 1
 force_render = 1
 app_id = "^broken$"
 
 [[rule.window_rule]]
-tags = 3
+tags = 2
 is_fullscreen = 1
 vrr_only_fullscreen = 1
 force_render = 1
