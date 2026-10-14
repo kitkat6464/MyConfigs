@@ -30,16 +30,6 @@ echo "Done!"
 echo
 
 echo
-echo "Refreshing AUR"
-echo
-
-yay -Syu
-
-echo
-echo "Done!"
-echo
-
-echo
 echo "Enabling Graphical Target"
 echo
 
@@ -70,6 +60,23 @@ echo
 #---------------------------------------------------#
 # Section 1 - Noctalia Greeter Setup                #
 #---------------------------------------------------#
+
+echo
+echo "Installing Noctalia Greeter"
+echo
+
+PKGS=(
+	'noctalia-greeter'
+)
+
+for PKG in "${PKGS[@]}"; do
+	echo "INSTALLING: ${PKG}"
+	sudo pacman -S "$PKG" --noconfirm --needed
+done
+
+echo
+echo "Done!"
+echo
 
 echo
 echo "Configuring Noctalia Greeter"
@@ -347,16 +354,6 @@ echo "Refreshing Repos Again"
 echo
 
 sudo pacman -Syu --noconfirm
-
-echo
-echo "Done!"
-echo
-
-echo
-echo "Refresh AUR Again"
-echo
-
-yay -Syu
 
 echo
 echo "Done!"
