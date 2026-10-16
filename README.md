@@ -7,18 +7,7 @@ MangoWM With Noctalia Shell and Noctalia Greeter For EndeavourOS.
 
 _____________________________________________________________________________________________________________________
 
-## Step 1: Install Noctalia Greeter From The AUR (Run This If You Installed With No Desktop)
-
-> [!IMPORTANT]
-> For Security Reasons, WE WILL NOT AUTOMATE AUR PACKAGE INSTALLS IN THE AUTOMATED SETUP. THEY MUST BE INSTALLED MANUALLY.
-
-- Noctalia Greeter:
-```shell
-yay -S noctalia-greeter
-```
-_____________________________________________________________________________________________________________________
-
-## Step 2: Install MangoWM, and Noctalia Shell Along With Some Useful Apps:
+## Step 1: Install MangoWM, Noctalia Shell and Noctalia Greeter Along With Some Useful Apps:
 
 ```shell
 curl -fsSL https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/Required-Setup | sh
@@ -26,7 +15,7 @@ curl -fsSL https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/man
 
 _____________________________________________________________________________________________________________________
 
-## Step 3: Setup Secondary Drive:
+## Step 2: Setup Secondary Drive:
 
 ```shell
 sudo mkdir /mnt/games
