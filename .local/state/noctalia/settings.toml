@@ -3,7 +3,6 @@ background_opacity = 0.04999999888241291
 capsule = true
 center = [ "media", "clock", "audio_visualizer" ]
 end = [ "group:g1", "group:g2", "tray", "volume", "notifications", "control-center" ]
-margin_ends = 150
 radius = 16
 shadow = false
 start = [ "privacy", "workspaces", "active_window" ]

@@ -179,8 +179,8 @@ cursor_hide_on_keypress = 1
 # Appearance Configuration
 gap_inner_horizontal = 10
 gap_inner_vertical = 10
-gap_outer_horizontal = 15
-gap_outer_vertical = 15
+gap_outer_horizontal = 20
+gap_outer_vertical = 20
 scratchpad_width_ratio = 0.8
 scratchpad_height_ratio = 0.9
 border_px = 2
