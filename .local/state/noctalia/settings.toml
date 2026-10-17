@@ -591,4 +591,3 @@ visualization = "none"
 
 [widget.workspaces]
 capsule_opacity = 0.75
-style = "minimal"
