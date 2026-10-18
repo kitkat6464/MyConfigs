@@ -73,7 +73,8 @@ widget_order = [
     "desktop-widget-0000000000000005",
     "desktop-widget-0000000000000007",
     "desktop-widget-0000000000000009",
-    "desktop-widget-000000000000000a"
+    "desktop-widget-000000000000000a",
+    "desktop-widget-000000000000000b"
 ]
 
     [desktop_widgets.grid]
@@ -110,7 +111,7 @@ widget_order = [
     [desktop_widgets.widget.desktop-widget-0000000000000005]
     box_height = 128.0
     box_width = 256.0
-    cx = 416.0
+    cx = 464.0
     cy = 236.0
     output = "DP-2"
     placement_height = 1080.0
@@ -134,7 +135,7 @@ widget_order = [
     box_height = 224.0
     box_width = 240.0
     cx = 984.0
-    cy = 264.0
+    cy = 268.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -209,6 +210,31 @@ widget_order = [
         reversed = true
         show_when_idle = true
 
+    [desktop_widgets.widget.desktop-widget-000000000000000b]
+    box_height = 64.0
+    box_width = 1920.0
+    cx = 960.0
+    cy = 1080.0
+    output = "DP-2"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-000000000000000b.settings]
+        background = false
+        background_color = "surface"
+        background_opacity = 0.80000000000000004
+        background_padding = 10
+        background_radius = 12
+        bands = 64
+        centered = true
+        color_1 = "primary"
+        color_2 = "tertiary"
+        mirrored = true
+        reversed = true
+        show_when_idle = true
+
 [dock]
 background_opacity = 0.04999999888241291
 enabled = true
@@ -249,19 +275,20 @@ widget_order = [
     "lockscreen-widget-0000000000000001",
     "lockscreen-widget-0000000000000004",
     "lockscreen-widget-000000000000000a",
-    "lockscreen-widget-000000000000000d"
+    "lockscreen-widget-000000000000000d",
+    "lockscreen-widget-000000000000000e"
 ]
 
     [lockscreen_widgets.grid]
-    cell_size = 16
+    cell_size = 24
     major_interval = 4
     visible = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
     box_height = 70.0
-    box_width = 656.0
-    cx = 960.0
-    cy = 1004.0
+    box_width = 768.0
+    cx = 1440.0
+    cy = 540.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -289,7 +316,7 @@ widget_order = [
     box_height = 64.0
     box_width = 1728.0
     cx = 960.0
-    cy = 508.0
+    cy = 1020.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -307,14 +334,14 @@ widget_order = [
         color_1 = "primary"
         color_2 = "tertiary"
         mirrored = true
-        reversed = false
+        reversed = true
         show_when_idle = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000004]
     box_height = 128.0
     box_width = 256.0
-    cx = 784.0
-    cy = 156.0
+    cx = 384.0
+    cy = 196.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -340,7 +367,7 @@ widget_order = [
     box_height = 0.0
     box_width = 0.0
     cx = 960.0
-    cy = 732.0
+    cy = 830.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -364,8 +391,8 @@ widget_order = [
     [lockscreen_widgets.widget.lockscreen-widget-000000000000000d]
     box_height = 128.0
     box_width = 256.0
-    cx = 1160.0
-    cy = 156.0
+    cx = 400.0
+    cy = 284.0
     output = "DP-2"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -375,6 +402,35 @@ widget_order = [
         [lockscreen_widgets.widget.lockscreen-widget-000000000000000d.settings]
         background = false
         color = "primary"
+
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000000e]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 576.0
+    cy = 540.0
+    output = "DP-2"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "fancy_audio_visualizer"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000000e.settings]
+        background = false
+        background_color = "surface"
+        background_opacity = 0.80000000000000004
+        background_padding = 10
+        background_radius = 12
+        bar_width = 0.59999999999999998
+        bloom_intensity = 0.5
+        fade_when_idle = true
+        inner_diameter = 0.69999999999999996
+        primary_color = "primary"
+        ring_opacity = 0.20000000000000001
+        rotation_speed = 0.5
+        secondary_color = "tertiary"
+        sensitivity = 1.5
+        visualization_mode = "all"
+        wave_thickness = 1.0
 
 [notification]
 background_opacity = 0.04999999888241291
