@@ -1,11 +1,11 @@
 [bar.default]
 background_opacity = 0.04999999888241291
 capsule = true
-center = [ "media", "clock", "audio_visualizer" ]
-end = [ "group:g1", "group:g2", "tray", "volume", "notifications", "control-center" ]
+center = [ "media", "weather", "control-center", "clock", "audio_visualizer" ]
+end = [ "group:g1", "group:g2", "volume", "notifications", "tray" ]
 radius = 16
 shadow = false
-start = [ "privacy", "workspaces", "active_window" ]
+start = [ "workspaces", "privacy", "active_window" ]
 widget_spacing = 8
 
     [bar.default.dead_zone.actions]
@@ -22,6 +22,7 @@ widget_spacing = 8
     [[bar.default.capsule_group]]
     accordion = false
     accordion_direction = "end"
+    border_width = 1.0
     enabled = true
     fill = "surface_variant"
     id = "g1"
@@ -32,6 +33,7 @@ widget_spacing = 8
     [[bar.default.capsule_group]]
     accordion = false
     accordion_direction = "end"
+    border_width = 1.0
     enabled = true
     fill = "surface_variant"
     id = "g2"
@@ -578,11 +580,15 @@ transition_on_startup = true
 
 [widget.active_window]
 capsule_opacity = 0.75
+max_length = 100
 title_scroll = "on_hover"
 
 [widget.audio_visualizer]
+bands = 8
 capsule_opacity = 0.75
+color_2 = "tertiary"
 show_when_idle = true
+width = 100
 
 [widget.clock]
 capsule_opacity = 0.75
@@ -615,6 +621,7 @@ visualization = "none"
 
 [widget.media]
 capsule_opacity = 0.75
+max_length = 100
 show_progress = true
 title_scroll = "on_hover"
 
@@ -643,6 +650,10 @@ capsule_opacity = 0.75
 stat = "gpu_vram_used"
 type = "sysmon"
 visualization = "none"
+
+[widget.weather]
+capsule_opacity = 0.75
+show_condition = false
 
 [widget.workspaces]
 capsule_opacity = 0.75
