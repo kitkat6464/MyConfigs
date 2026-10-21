@@ -1,8 +1,8 @@
 [bar.default]
 background_opacity = 0.04999999888241291
 capsule = true
-center = [ "media", "weather", "control-center", "clock", "audio_visualizer" ]
-end = [ "group:g1", "group:g2", "volume", "notifications", "tray" ]
+center = [ "media", "weather", "spacer_control_1", "control-center", "spacer_control_2", "clock", "audio_visualizer" ]
+end = [ "group:g1", "group:g2", "spacer_end_1", "volume", "notifications", "tray" ]
 radius = 16
 shadow = false
 start = [ "workspaces", "privacy", "active_window" ]
@@ -636,6 +636,21 @@ capsule_opacity = 0.75
 stat = "ram_used"
 type = "sysmon"
 visualization = "none"
+
+[widget.spacer_control_1]
+capsule = false
+length = 16
+type = "spacer"
+
+[widget.spacer_control_2]
+capsule = false
+length = 16
+type = "spacer"
+
+[widget.spacer_end_1]
+capsule = false
+length = 16
+type = "spacer"
 
 [widget.tray]
 capsule_opacity = 0.75
