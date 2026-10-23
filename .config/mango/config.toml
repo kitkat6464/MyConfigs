@@ -313,7 +313,7 @@ border_px = 2
 "none+up+4" = "enteroverview"
 "none+down+4" = "leaveoverview"
 
-# Montitor Rules
+# Monitor Rules
 [[rule.monitor_rule]]
 name = "DP-2"
 width = 1920
