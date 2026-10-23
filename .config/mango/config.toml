@@ -113,11 +113,12 @@ monocle_no_gap = 0
 deck_tab_mode = 1
 
 # Overview Configuration
-hotarea_size = 10
-enable_hotarea = 0
+hotarea_corner = 0
+hotarea_size = 5
+enable_hotarea = 1
 hotarea_disable_on_fullscreen = 1
-overview_gap_inner = 5
-overview_gap_outer = 30
+overview_gap_inner = 20
+overview_gap_outer = 40
 overcircle_center_ratio = 0.5
 title_message_bar_height = 52
 title_message_bar_gap = 20

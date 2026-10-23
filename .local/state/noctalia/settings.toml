@@ -260,9 +260,6 @@ smart_auto_hide = true
 [hot_corners]
 enabled = true
 
-    [hot_corners.top_left]
-    action = "window_switcher"
-
     [hot_corners.top_right]
     action = "control_center"
 
