@@ -10,6 +10,11 @@ XDG_SESSION_TYPE = "wayland"
 # Global Configuration
 [global]
 
+# Sub Config Load
+source = [
+    "./noctalia.conf",
+]
+
 # Start Noctalia and XDG Stuff
 exec_once = ["xdg-user-dirs-update", "xdg-desktop-portal-wlr", "noctalia"]
 
@@ -42,28 +47,6 @@ border_radius = 16
 no_radius_when_single = 0
 focused_opacity = 1.0
 unfocused_opacity = 0.8
-
-# Noctalia Theme for Mango
-root_color = 0x282a36ff
-border_color = 0x6d728bff
-drop_color = 0xbd93f980
-split_color = 0x8be9fdff
-focus_color = 0xbd93f9ff
-maximized_screen_color = 0xff79c6ff
-urgent_color = 0xff5555ff
-scratchpad_color = 0x8be9fdff
-global_color = 0x5b0ad0ff
-overlay_color = 0xc60071ff
-jump_label_decorate_fg_color = 0xf8f8f2ff
-jump_label_decorate_bg_color = 0x4d5066ff
-jump_label_decorate_focus_fg_color = 0x282a36ff
-jump_label_decorate_focus_bg_color = 0xbd93f9ff
-jump_label_decorate_border_color = 0x6d728bff
-group_bar_decorate_fg_color = 0xf8f8f2ff
-group_bar_decorate_bg_color = 0x4d5066ff
-group_bar_decorate_focus_fg_color = 0x282a36ff
-group_bar_decorate_focus_bg_color = 0xbd93f9ff
-group_bar_decorate_border_color = 0x6d728bff
 
 # Dim Configuration
 dim_enable = 0
