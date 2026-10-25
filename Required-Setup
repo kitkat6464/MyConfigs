@@ -57,7 +57,7 @@ sudo mkdir -p /etc/greetd
 sudo chown -R greeter:greeter /etc/greetd/
 sudo usermod -aG video,render greeter
 sudo cp -a /etc/greetd/config.toml /etc/greetd/config.toml.bak
-sudo wget -O /etc/greetd/config.toml https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/greetd/config.toml
+sudo wget -O /etc/greetd/config.toml https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/umbriel/sys_cfgs/greetd/config.toml
 sudo chmod 644 /etc/greetd/config.toml
 
 echo
@@ -210,7 +210,7 @@ echo "Configuring Custom Configs"
 echo
 
 mkdir -p ~/.config/umbriel
-curl -Lo $HOME/.config/mimeapps.list https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/.config/mimeapps.list
+curl -Lo $HOME/.config/mimeapps.list https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/umbriel/.config/mimeapps.list
 curl -Lo $HOME/.config/umbriel/config.toml https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/umbriel/.config/umbriel/config.toml
 
 echo

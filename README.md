@@ -7,10 +7,10 @@ Umbriel With Noctalia Shell and Noctalia Greeter For EndeavourOS.
 
 _____________________________________________________________________________________________________________________
 
-## Step 0: Install Umbriel and It's Portal
+## Step 0: Install Umbriel
 
 ```shell
-yay -S umbriel-git xdg-desktop-portal-umbriel-git
+yay -S umbriel-git
 ```
 
 _____________________________________________________________________________________________________________________
