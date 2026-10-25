@@ -6,17 +6,6 @@
 
 #---------------------------------------------------#
 # Section 0 - Pre Flight                            #
-# Section 1 - Noctalia Greeter Setup                #
-# Section 2 - MangoWM Setup                         #
-# Section 3 - Noctalia Shell Setup                  #
-# Section 4 - Core Apps Setup                       #
-# Section 5 - Custom Config Setup                   #
-# Section 6 - System Optimsations                   #
-# Section 7 - Post Flight                           #
-#---------------------------------------------------#
-
-#---------------------------------------------------#
-# Section 0 - Pre Flight                            #
 #---------------------------------------------------#
 
 echo
@@ -34,24 +23,6 @@ echo "Enabling Graphical Target"
 echo
 
 sudo systemctl set-default graphical.target
-
-echo
-echo "Done!"
-echo
-
-echo
-echo "Installing LTS Linux Kernel"
-echo
-
-PKGS=(
-	'linux-lts'
-	'linux-lts-headers'
-)
-
-for PKG in "${PKGS[@]}"; do
-	echo "INSTALLING: ${PKG}"
-	sudo pacman -S "$PKG" --noconfirm --needed
-done
 
 echo
 echo "Done!"
@@ -104,19 +75,15 @@ echo "Done!"
 echo
 
 #---------------------------------------------------#
-# Section 2 - MangoWM Setup                         #
+# Section 2 - Umbriel Setup                         #
 #---------------------------------------------------#
 
 echo
-echo "Installing MangoWM and Dependencies"
+echo "Installing Extra Umbriel Dependencies"
 echo
 
 PKGS=(
-	'mangowm'
-	'wlr-randr'
 	'gnome-keyring'
-	'xdg-desktop-portal-gtk'
-	'xdg-desktop-portal-wlr'
 )
 
 for PKG in "${PKGS[@]}"; do
@@ -234,28 +201,6 @@ echo
 echo "Done!"
 echo
 
-echo
-echo "Installing Gaming Packages"
-echo
-
-PKGS=(
-	'steam'
-	'mangohud'
-	'gamescope'
-	'umu-launcher'
-	'lib32-mangohud'
-	'ntsync-autoload'
-)
-
-for PKG in "${PKGS[@]}"; do
-	echo "INSTALLING: ${PKG}"
-	sudo pacman -S "$PKG" --noconfirm --needed
-done
-
-echo
-echo "Done!"
-echo
-
 #---------------------------------------------------#
 # Section 5 - Custom Config Setup                   #
 #---------------------------------------------------#
@@ -264,82 +209,9 @@ echo
 echo "Configuring Custom Configs"
 echo
 
-mkdir -p ~/.config/mango
-mkdir -p ~/.config/fastfetch
-mkdir -p ~/.config/scopebuddy
-mkdir -p ~/.local/state/noctalia
-mkdir -p ~/.config/xdg-desktop-portal
-mkdir -p ~/.config/xdg-desktop-portal-wlr
+mkdir -p ~/.config/umbriel
 curl -Lo $HOME/.config/mimeapps.list https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/.config/mimeapps.list
-curl -Lo $HOME/.config/mango/config.toml https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/.config/mango/config.toml
-curl -Lo $HOME/.config/fastfetch/config.jsonc https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/.config/fastfetch/config.jsonc
-curl -Lo $HOME/.config/fastfetch/adorable-pastel-ghost-kawaii-halloween-sticker.png https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/.config/fastfetch/adorable-pastel-ghost-kawaii-halloween-sticker.png
-curl -Lo $HOME/.config/scopebuddy/scb.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/.config/scopebuddy/scb.conf
-curl -Lo $HOME/.local/state/noctalia/settings.toml https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/.local/state/noctalia/settings.toml
-curl -Lo $HOME/.config/xdg-desktop-portal/mango-portals.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/.config/xdg-desktop-portal/mango-portals.conf
-curl -Lo $HOME/.config/xdg-desktop-portal-wlr/config https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/.config/xdg-desktop-portal-wlr/config
-
-echo
-echo "Done!"
-echo
-
-echo
-echo "Installing ScopeBuddy"
-echo
-
-sudo wget -O /usr/local/bin/scopebuddy https://raw.githubusercontent.com/OpenGamingCollective/ScopeBuddy/refs/tags/1.5.0/bin/scopebuddy
-sudo chmod +x /usr/local/bin/scopebuddy
-sudo ln -s scopebuddy /usr/local/bin/scb
-
-echo
-echo "Done!"
-echo
-
-#---------------------------------------------------#
-# Section 6 - System Optimsations                   #
-#---------------------------------------------------#
-
-echo
-echo "Installing Optimsation Tools"
-echo
-
-PKGS=(
-	'scx-tools'
-	'scx-scheds'
-	'zram-generator'
-)
-
-for PKG in "${PKGS[@]}"; do
-	echo "INSTALLING: ${PKG}"
-	sudo pacman -S "$PKG" --noconfirm --needed
-done
-
-echo
-echo "Done!"
-echo
-
-echo
-echo "Configuring Optimsation Configs"
-echo
-
-sudo mkdir /etc/systemd/system.conf.d
-sudo mkdir /etc/systemd/user.conf.d
-sudo wget -O /etc/sysctl.d/70-aleph-settings.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/sysctl.d/70-aleph-settings.conf
-sudo wget -O /etc/sysctl.d/99-splitlock.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/sysctl.d/99-splitlock.conf
-sudo wget -O /etc/systemd/zram-generator.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/systemd/zram-generator.conf
-sudo wget -O /etc/udev/rules.d/30-zram.rules https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/rules.d/30-zram.rules
-sudo wget -O /etc/scx_loader.toml https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/scx_loader/scx_loader.toml
-sudo wget -O /etc/security/limits.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/security/limits.conf
-sudo wget -O /etc/systemd/system.conf.d/10-limits.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/systemd/system/10-limits.conf
-sudo wget -O /etc/systemd/user.conf.d/10-limits.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/systemd/user/10-limits.conf
-sudo wget -O /etc/systemd/system.conf.d/00-timeout.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/systemd/00-timeout.conf
-sudo wget -O /etc/systemd/user.conf.d/00-timeout.conf https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/systemd/00-timeout.conf
-sudo wget -O /usr/lib/udev/rules.d/99-ntsync.rules https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/sys_cfgs/rules.d/99-ntsync.rules
-sudo sysctl --system
-sudo systemctl daemon-reload
-sudo systemctl start /dev/zram0
-sudo systemctl enable --now scx_loader.service
-sudo systemctl restart scx_loader.service
+curl -Lo $HOME/.config/umbriel/config.toml https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/umbriel/.config/umbriel/config.toml
 
 echo
 echo "Done!"

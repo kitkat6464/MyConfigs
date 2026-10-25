@@ -1,5 +1,5 @@
 <div align="center">
-MangoWM With Noctalia Shell and Noctalia Greeter For EndeavourOS.
+Umbriel With Noctalia Shell and Noctalia Greeter For EndeavourOS.
 </div>
 
 > [!IMPORTANT]
@@ -7,10 +7,18 @@ MangoWM With Noctalia Shell and Noctalia Greeter For EndeavourOS.
 
 _____________________________________________________________________________________________________________________
 
-## Step 1: Install MangoWM, Noctalia Shell and Noctalia Greeter Along With Some Useful Apps:
+## Step 0: Install Umbriel and It's Portal
 
 ```shell
-curl -fsSL https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/Required-Setup | sh
+yay -S umbriel-git xdg-desktop-portal-umbriel-git
+```
+
+_____________________________________________________________________________________________________________________
+
+## Step 1: Install Noctalia Shell and Noctalia Greeter Along With Some Useful Apps:
+
+```shell
+curl -fsSL https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/umbriel/Required-Setup | sh
 ```
 
 _____________________________________________________________________________________________________________________
