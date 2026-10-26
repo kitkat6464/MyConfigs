@@ -323,7 +323,7 @@ refresh = 180.003
 x = 0
 y = 0
 scale = 1
-vrr = 1
+vrr = 0
 rr = 0
 hdr = 0
 
@@ -373,21 +373,18 @@ title = "^Library$"
 [[rule.window_rule]]
 tags = 2
 is_fullscreen = 1
-vrr_only_fullscreen = 1
 force_render = 1
 app_id = "^gamescope$"
 
 [[rule.window_rule]]
 tags = 2
 is_fullscreen = 1
-vrr_only_fullscreen = 1
 force_render = 1
 app_id = "^broken$"
 
 [[rule.window_rule]]
 tags = 2
 is_fullscreen = 1
-vrr_only_fullscreen = 1
 force_render = 1
 app_id = "^steam_app.*$"
 
