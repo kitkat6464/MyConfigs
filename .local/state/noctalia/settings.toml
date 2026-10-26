@@ -24,7 +24,7 @@ widget_spacing = 8
     accordion_direction = "end"
     border_width = 1.0
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g1"
     members = [ "cpu-mon", "cpu-temp", "ram-used" ]
     opacity = 0.75
@@ -35,7 +35,7 @@ widget_spacing = 8
     accordion_direction = "end"
     border_width = 1.0
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g2"
     members = [ "gpu-mon", "gpu-temp", "vram-used" ]
     opacity = 0.75
@@ -295,7 +295,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.5
         background_radius = 12.0
         center_password_text = true
@@ -461,6 +461,7 @@ telemetry_enabled = true
     categories = false
     category_icons_only = true
     default_view = "all"
+    show_navigation_labels = false
     sort_by_usage = false
     track_usage = false
 
@@ -481,11 +482,17 @@ telemetry_enabled = true
 
     [shell.panel]
     clipboard_placement = "attached"
+    control_center_position = "center"
     list_item_background = true
+    open_near_click_clipboard = true
+    open_near_click_control_center = true
+    open_near_click_session = true
+    open_near_click_wallpaper = true
     polkit_placement = "attached"
     session_position = "center"
     shadow = false
     transparency_mode = "glass"
+    wallpaper_position = "center"
     wallpaper_show_names = false
 
     [shell.screen_corners]
@@ -561,7 +568,7 @@ builtin = "Dracula"
         "umbriel",
         "wezterm"
     ]
-    community_ids = [ "pywalfox-beta4" ]
+    community_ids = [ "pywalfox-beta4", "starship" ]
 
 [wallpaper]
 directory = "/home/catrina/Pictures/Wallpapers"
