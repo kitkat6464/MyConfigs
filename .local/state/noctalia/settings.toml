@@ -453,9 +453,6 @@ settings_show_advanced = false
 settings_window_translucent = true
 telemetry_enabled = true
 
-    [shell.greeter_sync]
-    auto_sync = true
-
     [shell.launcher]
     app_grid = true
     categories = false
