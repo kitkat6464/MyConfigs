@@ -176,7 +176,7 @@ border_px = 2
 [bind.default]
 
 # Favorite Application Bindings
-"SUPER+Return" = "spawn,kitty"
+"SUPER+Return" = "spawn,ghostty"
 "SUPER+f" = "spawn,nautilus"
 "SUPER+b" = "spawn,firefox"
 
@@ -348,7 +348,7 @@ layout_name = "scroller"
 # Window Rules
 [[rule.window_rule]]
 is_floating = 1
-app_id = "kitty"
+app_id = "ghostty"
 
 [[rule.window_rule]]
 is_floating = 1
@@ -364,11 +364,11 @@ app_id = "^steam$"
 
 [[rule.window_rule]]
 tags = 2
-app_id = "^firefox$"
+app_id = "firefox"
 
 [[rule.window_rule]]
 is_floating = 1
-app_id = "^firefox$.*"
+app_id = "firefox"
 title = "^Library$"
 
 [[rule.window_rule]]
@@ -410,4 +410,3 @@ height = 220
 offset_y = 96
 offset_x = 98
 title = "Picture in picture"
-

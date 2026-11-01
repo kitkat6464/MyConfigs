@@ -39,24 +39,6 @@ echo
 echo "Done!"
 echo
 
-echo
-echo "Installing LTS Linux Kernel"
-echo
-
-PKGS=(
-	'linux-lts'
-	'linux-lts-headers'
-)
-
-for PKG in "${PKGS[@]}"; do
-	echo "INSTALLING: ${PKG}"
-	sudo pacman -S "$PKG" --noconfirm --needed
-done
-
-echo
-echo "Done!"
-echo
-
 #---------------------------------------------------#
 # Section 1 - Noctalia Greeter Setup                #
 #---------------------------------------------------#
@@ -139,7 +121,6 @@ echo
 PKGS=(
 	'noctalia'
 	'ddcutil'
-	'cliphist'
 )
 
 for PKG in "${PKGS[@]}"; do
@@ -181,8 +162,7 @@ echo
 PKGS=(
 	'loupe'
 	'papers'
-	'showtime'
-	'decibels'
+	'vlc'
 	'nautilus'
 	'gnome-logs'
 	'gnome-calendar'
@@ -221,7 +201,7 @@ echo "Installing Additional Apps"
 echo
 
 PKGS=(
-	'kitty'
+	'ghostty'
 	'fastfetch'
 )
 

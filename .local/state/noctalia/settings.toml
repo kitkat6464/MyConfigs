@@ -244,13 +244,13 @@ icon_size = 34
 launcher_position = "start"
 pinned = [
     "org.gnome.Nautilus",
-    "firefox",
-    "kitty",
+    "org.mozilla.firefox",
+    "com.mitchellh.ghostty",
     "com.spotify.Client",
     "steam",
     "net.lutris.Lutris",
     "com.modrinth.ModrinthApp",
-    "io.github.kolunmi.Bazaar"
+    "org.rakuos.Software"
 ]
 reserve_space = false
 shadow = false
@@ -441,9 +441,25 @@ border = false
 
 [plugins]
 auto_update = "official"
+enabled = [ "etrigan63/rum-updates" ]
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/etrigan63/rum-updates"
+    name = "rum-updates"
 
 [shell]
-avatar_path = "/home/catrina/Pictures/PFPs/pfp1.png"
+avatar_path = "/var/home/catrina/Pictures/PFPs/pfp1.png"
 corner_radius_scale = 2.0
 password_style = "random"
 polkit_agent = true
@@ -497,7 +513,7 @@ telemetry_enabled = true
 
     [shell.screenshot]
     confirm_region = true
-    directory = "/home/catrina/Pictures/Screenshots"
+    directory = "/var/home/catrina/Pictures/Screenshots"
     remember_last_region = true
 
     [[shell.session.actions]]
@@ -568,17 +584,17 @@ builtin = "Dracula"
     community_ids = [ "pywalfox-beta4", "starship" ]
 
 [wallpaper]
-directory = "/home/catrina/Pictures/Wallpapers"
+directory = "/var/home/catrina/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/catrina/Pictures/Wallpapers/wallhaven-ly2ovq_1920x1080.png"
+    path = "/var/home/catrina/Pictures/Wallpapers/wallhaven-ly2ovq_1920x1080.png"
 
     [wallpaper.last]
-    path = "/home/catrina/Pictures/Wallpapers/wallhaven-ly2ovq_1920x1080.png"
+    path = "/var/home/catrina/Pictures/Wallpapers/wallhaven-ly2ovq_1920x1080.png"
 
     [wallpaper.monitors.DP-2]
-    path = "/home/catrina/Pictures/Wallpapers/wallhaven-ly2ovq_1920x1080.png"
+    path = "/var/home/catrina/Pictures/Wallpapers/wallhaven-ly2ovq_1920x1080.png"
 
 [widget.active_window]
 capsule_opacity = 0.75
