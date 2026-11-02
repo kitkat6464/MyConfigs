@@ -592,7 +592,7 @@ builtin = "Dracula"
         "umbriel",
         "wezterm"
     ]
-    community_ids = [ "pywalfox-beta4", "starship" ]
+    community_ids = [ "pywalfox", "starship" ]
 
 [wallpaper]
 directory = "/var/home/catrina/Pictures/Wallpapers"
