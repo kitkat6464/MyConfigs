@@ -52,6 +52,10 @@ widget_spacing = 8
     opacity = 0.64999997615814209
     padding = 6.0
 
+[bluetooth]
+connect_when_enabled = true
+connection_notifications = true
+
 [brightness]
 enable_ddcutil = true
 minimum_brightness = 0.14999999664723873
