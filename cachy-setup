@@ -54,7 +54,8 @@ info "Installing Core Apps..."
 sudo pacman -S --noconfirm \
     loupe \
     papers \
-    vlc \
+    showtime \
+	decibels \
     nautilus \
     gnome-logs \
     gnome-calendar \

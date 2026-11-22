@@ -25,12 +25,12 @@ auto_reload_config=1
 blur = 1
 blur_layer = 1
 blur_optimized = 0
-blur_params_num_passes = 2
-blur_params_radius = 5
+blur_params_num_passes = 4
+blur_params_radius = 6
 blur_params_noise = 0.02
-blur_params_brightness = 0.9
-blur_params_contrast = 0.9
-blur_params_saturation = 1.0
+blur_params_brightness = 1.0
+blur_params_contrast = 1.4
+blur_params_saturation = 1.4
 
 # Shadow Configuration
 shadows = 1
@@ -176,7 +176,7 @@ border_px = 2
 [bind.default]
 
 # Favorite Application Bindings
-"SUPER+Return" = "spawn,ghostty"
+"SUPER+Return" = "spawn,kitty"
 "SUPER+f" = "spawn,nautilus"
 "SUPER+b" = "spawn,firefox"
 
@@ -348,7 +348,7 @@ layout_name = "scroller"
 # Window Rules
 [[rule.window_rule]]
 is_floating = 1
-app_id = "ghostty"
+app_id = "kitty"
 
 [[rule.window_rule]]
 is_floating = 1
@@ -364,11 +364,11 @@ app_id = "^steam$"
 
 [[rule.window_rule]]
 tags = 2
-app_id = "firefox"
+app_id = "^firefox$"
 
 [[rule.window_rule]]
 is_floating = 1
-app_id = "firefox"
+app_id = "^firefox$.*"
 title = "^Library$"
 
 [[rule.window_rule]]
@@ -410,3 +410,4 @@ height = 220
 offset_y = 96
 offset_x = 98
 title = "Picture in picture"
+
