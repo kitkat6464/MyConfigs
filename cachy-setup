@@ -1,0 +1,122 @@
+#!/bin/bash
+
+set -e
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
+
+info()  { echo -e "${GREEN}[INFO]${NC} $1"; }
+warn()  { echo -e "${YELLOW}[WARN]${NC} $1"; }
+error() { echo -e "${RED}[ERROR]${NC} $1"; exit 1; }
+
+[[ $EUID -eq 0 ]] && error "Do not run as root."
+
+#---------------------------------------------------#
+# Section 1 - Updating System                       #
+#---------------------------------------------------#
+
+info "Updating System..."
+sudo pacman -Syu --noconfirm
+
+#---------------------------------------------------#
+# Section 2 - Enabling Graphical Target             #
+#---------------------------------------------------#
+
+info "Enabling Graphical Target..."
+sudo systemctl set-default graphical.target
+
+#---------------------------------------------------#
+# Section 3 - Installing Applications               #
+#---------------------------------------------------#
+
+info "Installing Noctalia Greeter..."
+sudo pacman -S --noconfirm noctalia-greeter
+
+info "Installing MangoWM, and Dependencies..."
+sudo pacman -S --noconfirm \
+    mangowm \
+    wlr-randr \
+    gnome-keyring \
+    xdg-desktop-portal-gtk \
+    xdg-desktop-portal-wlr
+
+info "Installing Noctalia Shell, and Dependencies..."
+sudo pacman -S --noconfirm \
+    noctalia \
+    ddcutil \
+    qt6ct \
+    nwg-look \
+    adw-gtk-theme
+
+info "Installing Core Apps..."
+sudo pacman -S --noconfirm \
+    loupe \
+    papers \
+    vlc \
+    nautilus \
+    gnome-logs \
+    gnome-calendar \
+    gnome-text-editor \
+    gnome-disk-utility \
+    bazaar \
+    kitty
+
+info "Installing Gaming Essentials, and ScopeBuddy..."
+sudo pacman -S --noconfirm \
+    cachyos-gaming-applications \
+    cachyos-gaming-meta
+sudo wget -O /usr/local/bin/scopebuddy https://raw.githubusercontent.com/OpenGamingCollective/ScopeBuddy/refs/tags/1.5.0/bin/scopebuddy
+sudo chmod +x /usr/local/bin/scopebuddy
+sudo ln -s scopebuddy /usr/local/bin/scb
+
+#---------------------------------------------------#
+# Section 4 - Configuring Noctalia Greeter          #
+#---------------------------------------------------#
+
+info "Setting Up Noctalia Greeter..."
+sudo mkdir -p /etc/greetd
+sudo usermod -aG video,render greeter
+sudo chown -R greeter:greeter /etc/greetd/
+sudo cp -a /etc/greetd/config.toml /etc/greetd/config.toml.bak
+sudo tee /etc/greetd/config.toml > /dev/null <<'EOF'
+[terminal]
+vt = 1
+
+[default_session]
+command = "/usr/bin/noctalia-greeter-session"
+user = "greeter"
+EOF
+sudo chmod 644 /etc/greetd/config.toml
+
+#---------------------------------------------------#
+# Section 5 - Configuring Dot Files                 #
+#---------------------------------------------------#
+
+info "Setting Up Dot Files..."
+cp -R fastfetch mango scopebuddy xdg-desktop-portal-wlr xdg-desktop-portal mimeapps.list ~/.config/
+cp -R state ~/.local/
+
+#---------------------------------------------------#
+# Section 6 - Enabling Services                     #
+#---------------------------------------------------#
+
+info "Enabling Noctalia Greeter..."
+sudo systemctl enable greetd
+
+#---------------------------------------------------#
+# Section 7 - Post Flight                           #
+#---------------------------------------------------#
+
+info "Checking For Updates Again..."
+sudo pacman -Syu --noconfirm
+
+#---------------------------------------------------#
+# Section 8  - The End                                #
+#---------------------------------------------------#
+
+echo ""
+echo -e "${GREEN}================================${NC}"
+echo -e "${GREEN} Setup Complete! Please Reboot. ${NC}"
+echo -e "${GREEN}================================${NC}"

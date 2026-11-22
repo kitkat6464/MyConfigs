@@ -1,16 +1,28 @@
 <div align="center">
-MangoWM With Noctalia Shell and Noctalia Greeter For EndeavourOS.
+MangoWM With Noctalia Shell, and Noctalia Greeter For CachyOS.
 </div>
 
 > [!IMPORTANT]
-> READ INSTALLER FILE TO SEE WHAT GETS INSTALLED. Fork This Repo and Remove Stuff You Don't Need Or If You Want To Add Something.
+> READ INSTALLER FILE TO SEE WHAT GETS INSTALLED. Fork This Repo, and Remove Stuff You Don't Need Or If You Want To Add Something.
 
 _____________________________________________________________________________________________________________________
 
-## Step 1: Install MangoWM, Noctalia Shell and Noctalia Greeter Along With Some Useful Apps:
+## Step 1: Install MangoWM, Noctalia Shell, and Noctalia Greeter Along With Some Useful Apps:
 
 ```shell
-curl -fsSL https://raw.githubusercontent.com/kitkat6464/MyConfigs/refs/heads/mango/Required-Setup | sh
+git clone https://github.com/kitkat6464/MyConfigs.git
+```
+
+```shell
+cd MyConfigs
+```
+
+```shell
+chmod +x cachy-setup
+```
+
+```shell
+./cachy-setup
 ```
 
 _____________________________________________________________________________________________________________________
