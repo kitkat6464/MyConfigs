@@ -95,8 +95,8 @@ sudo chmod 644 /etc/greetd/config.toml
 #---------------------------------------------------#
 
 info "Setting Up Dot Files..."
-cp -R fastfetch mango scopebuddy xdg-desktop-portal-wlr xdg-desktop-portal mimeapps.list "$home/.config/"
-cp -R state "$home/.local/"
+cp -R fastfetch mango scopebuddy xdg-desktop-portal-wlr xdg-desktop-portal mimeapps.list ~/.config/
+cp -R state ~/.local/
 
 #---------------------------------------------------#
 # Section 6 - Enabling Services                     #

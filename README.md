@@ -18,11 +18,11 @@ cd MyConfigs
 ```
 
 ```shell
-chmod +x cachy-setup.sh
+chmod +x cachy-setup
 ```
 
 ```shell
-./cachy-setup.sh
+./cachy-setup
 ```
 
 _____________________________________________________________________________________________________________________
