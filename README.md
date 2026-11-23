@@ -1,5 +1,5 @@
 <div align="center">
-MangoWM With Noctalia Shell, and Noctalia Greeter For CachyOS.
+CosmicDE For CachyOS.
 </div>
 
 > [!IMPORTANT]
@@ -7,7 +7,7 @@ MangoWM With Noctalia Shell, and Noctalia Greeter For CachyOS.
 
 _____________________________________________________________________________________________________________________
 
-## Step 1: Install MangoWM, Noctalia Shell, and Noctalia Greeter Along With Some Useful Apps:
+## Step 1: Install Cosmic DE With Some Useful Apps:
 
 ```shell
 git clone https://github.com/kitkat6464/MyConfigs.git

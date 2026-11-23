@@ -30,51 +30,50 @@ sudo systemctl set-default graphical.target
 #---------------------------------------------------#
 # Section 3 - Installation Stage                    #
 #---------------------------------------------------#
-
-info "Installing Noctalia Greeter..."
-sudo pacman -S --noconfirm noctalia-greeter
-
-info "Installing MangoWM..."
-sudo pacman -S --noconfirm mangowm
     
-info "Installing MangoWM Essentials..."
-sudo pacman -S --noconfirm wlr-randr
+info "Installing Cosmic Desktop..."
+sudo pacman -S --noconfirm \
+    cosmic-app-library \
+    cosmic-applets \
+    cosmic-bg \
+    cosmic-comp \
+    cosmic-files \
+    cosmic-greeter \
+    cosmic-idle \
+    cosmic-initial-setup \
+    cosmic-launcher \
+    cosmic-monitor \
+    cosmic-notifications \
+    cosmic-osd \
+    cosmic-osk \
+    cosmic-panel \
+    cosmic-player \
+    cosmic-randr \
+    cosmic-screenshot \
+    cosmic-session \
+    cosmic-settings \
+    cosmic-settings-daemon \
+    cosmic-sound-theme \
+    cosmic-store \
+    cosmic-terminal \
+    cosmic-text-editor \
+    cosmic-viewer \
+    cosmic-wallpapers \
+    cosmic-workspaces
     
 info "Installing XDG Portal Essentials..."
 sudo pacman -S --noconfirm \
     gnome-keyring \
     xdg-desktop-portal-gtk \
-    xdg-desktop-portal-wlr
-
-info "Installing Noctalia Shell..."
-sudo pacman -S --noconfirm noctalia
-    
-info "Installing Noctalia Shell Essentials..."
-sudo pacman -S --noconfirm \
-    ddcutil \
-    qt5ct \
-    qt6ct \
-    nwg-look \
-    adw-gtk-theme
+    xdg-desktop-portal-cosmic
 
 info "Installing Gnome App Essentials..."
 sudo pacman -S --noconfirm \
-    loupe \
     papers \
-    showtime \
-	decibels \
-	nautilus \
     gnome-logs \
     gnome-calendar \
     gnome-calculator \
-    gnome-text-editor \
-    gnome-disk-utility \
-    gnome-system-monitor
-    
-info "Installing Kitty, and Bazaar..."
-sudo pacman -S --noconfirm \
-    kitty \
-    bazaar
+    gnome-disk-utility
 
 info "Installing Gaming Essentials..."
 sudo pacman -S --noconfirm \
@@ -90,29 +89,14 @@ sudo ln -s scopebuddy /usr/local/bin/scb
 # Section 4 - Configuration Stage                   #
 #---------------------------------------------------#
 
-info "Setting Up Noctalia Greeter..."
-sudo mkdir -p /etc/greetd
-sudo usermod -aG video,render greeter
-sudo chown -R greeter:greeter /etc/greetd/
-sudo cp -a /etc/greetd/config.toml /etc/greetd/config.toml.bak
-sudo tee /etc/greetd/config.toml > /dev/null <<'EOF'
-[terminal]
-vt = 1
-
-[default_session]
-command = "/usr/bin/noctalia-greeter-session"
-user = "greeter"
-EOF
-sudo chmod 644 /etc/greetd/config.toml
-
 info "Setting Up Dot Files..."
-cp -R fastfetch mango scopebuddy xdg-desktop-portal-wlr xdg-desktop-portal mimeapps.list ~/.config/
+cp -R fastfetch scopebuddy ~/.config/
 
 #---------------------------------------------------#
 # Section 5 - Enabling Services Stage               #
 #---------------------------------------------------#
 
-info "Enabling Noctalia Greeter..."
+info "Enabling Cosmic Greeter..."
 sudo systemctl enable greetd
 
 #---------------------------------------------------#
