@@ -14,66 +14,80 @@ error() { echo -e "${RED}[ERROR]${NC} $1"; exit 1; }
 [[ $EUID -eq 0 ]] && error "Do not run as root."
 
 #---------------------------------------------------#
-# Section 1 - Updating System                       #
+# Section 1 - Updating Stage                        #
 #---------------------------------------------------#
 
 info "Updating System..."
 sudo pacman -Syu --noconfirm
 
 #---------------------------------------------------#
-# Section 2 - Enabling Graphical Target             #
+# Section 2 - Graphical Target Stage                #
 #---------------------------------------------------#
 
 info "Enabling Graphical Target..."
 sudo systemctl set-default graphical.target
 
 #---------------------------------------------------#
-# Section 3 - Installing Applications               #
+# Section 3 - Installation Stage                    #
 #---------------------------------------------------#
 
 info "Installing Noctalia Greeter..."
 sudo pacman -S --noconfirm noctalia-greeter
 
-info "Installing MangoWM, and Dependencies..."
+info "Installing MangoWM..."
+sudo pacman -S --noconfirm mangowm
+    
+info "Installing MangoWM Essentials..."
+sudo pacman -S --noconfirm wlr-randr
+    
+info "Installing XDG Portal Essentials..."
 sudo pacman -S --noconfirm \
-    mangowm \
-    wlr-randr \
     gnome-keyring \
     xdg-desktop-portal-gtk \
     xdg-desktop-portal-wlr
 
-info "Installing Noctalia Shell, and Dependencies..."
+info "Installing Noctalia Shell..."
+sudo pacman -S --noconfirm noctalia
+    
+info "Installing Noctalia Shell Essentials..."
 sudo pacman -S --noconfirm \
-    noctalia \
     ddcutil \
+    qt5ct \
     qt6ct \
     nwg-look \
     adw-gtk-theme
 
-info "Installing Core Apps..."
+info "Installing Gnome App Essentials..."
 sudo pacman -S --noconfirm \
     loupe \
     papers \
     showtime \
 	decibels \
-    nautilus \
+	nautilus \
     gnome-logs \
     gnome-calendar \
+    gnome-calculator \
     gnome-text-editor \
     gnome-disk-utility \
-    bazaar \
-    kitty
+    gnome-system-monitor
+    
+info "Installing Kitty, and Bazaar..."
+sudo pacman -S --noconfirm \
+    kitty \
+    bazaar
 
-info "Installing Gaming Essentials, and ScopeBuddy..."
+info "Installing Gaming Essentials..."
 sudo pacman -S --noconfirm \
     cachyos-gaming-applications \
     cachyos-gaming-meta
+    
+info "Installing ScopeBuddy For GameScope..."
 sudo wget -O /usr/local/bin/scopebuddy https://raw.githubusercontent.com/OpenGamingCollective/ScopeBuddy/refs/tags/1.5.0/bin/scopebuddy
 sudo chmod +x /usr/local/bin/scopebuddy
 sudo ln -s scopebuddy /usr/local/bin/scb
 
 #---------------------------------------------------#
-# Section 4 - Configuring Noctalia Greeter          #
+# Section 4 - Configuration Stage                   #
 #---------------------------------------------------#
 
 info "Setting Up Noctalia Greeter..."
@@ -91,31 +105,22 @@ user = "greeter"
 EOF
 sudo chmod 644 /etc/greetd/config.toml
 
-#---------------------------------------------------#
-# Section 5 - Configuring Dot Files                 #
-#---------------------------------------------------#
-
 info "Setting Up Dot Files..."
 cp -R fastfetch mango scopebuddy xdg-desktop-portal-wlr xdg-desktop-portal mimeapps.list ~/.config/
-cp -R state ~/.local/
 
 #---------------------------------------------------#
-# Section 6 - Enabling Services                     #
+# Section 5 - Enabling Services Stage               #
 #---------------------------------------------------#
 
 info "Enabling Noctalia Greeter..."
 sudo systemctl enable greetd
 
 #---------------------------------------------------#
-# Section 7 - Post Flight                           #
+# Section 6  - Completion Stage                     #
 #---------------------------------------------------#
 
 info "Checking For Updates Again..."
 sudo pacman -Syu --noconfirm
-
-#---------------------------------------------------#
-# Section 8  - The End                                #
-#---------------------------------------------------#
 
 echo ""
 echo -e "${GREEN}================================${NC}"
