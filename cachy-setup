@@ -97,7 +97,7 @@ cp -R fastfetch scopebuddy ~/.config/
 #---------------------------------------------------#
 
 info "Enabling Cosmic Greeter..."
-sudo systemctl enable greetd
+sudo systemctl enable cosmic-greeter
 
 #---------------------------------------------------#
 # Section 6  - Completion Stage                     #
